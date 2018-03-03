@@ -1,0 +1,46 @@
+html {
+  background: url('./login.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: sans-serif;
+}
+
+.mainSidebar{
+  padding :none;
+  margin: none;
+}
+
+.mainSidebar ul{
+  list-style: none;
+  margin:none;
+}
+
+.mainSidebar ul li{
+  padding: 5px;
+  position: relative;
+  width: 125px;
+  height: 35px;
+  background: rgba(25,25,25,0.6);
+  border-top:  1px solid white;
+}
+
+.mainSidebar ul ul{
+  position: absolute;
+  visibility: collapse;
+  transition: all 0.3s;
+  opacity: 0;
+  left: 71%;
+  top:-2%;
+}
+
+.mainSidebar ul li:hover > ul{
+    color:red;
+    position: absolute;
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.mainSidebar ul li a{
+  color:white;
+  text-decoration: none;
+}
