@@ -1,8 +1,16 @@
 html {
-  background: url('./login.jpg') no-repeat center center fixed;
   background-size: cover;
   font-family: sans-serif;
 }
+
+#backVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
 
 .mainSidebar{
   padding :none;
@@ -17,10 +25,11 @@ html {
 .mainSidebar ul li{
   padding: 5px;
   position: relative;
+  color: white;
   width: 125px;
   height: 35px;
-  background: rgba(25,25,25,0.6);
-  border-top:  1px solid white;
+  background: rgba(0,0,0,0.6);
+  border-right:  1px solid white;
 }
 
 .mainSidebar ul ul{
@@ -28,8 +37,8 @@ html {
   visibility: collapse;
   transition: all 0.3s;
   opacity: 0;
-  left: 71%;
-  top:-2%;
+  left: 72%;
+  top: 0%;
 }
 
 .mainSidebar ul li:hover > ul{

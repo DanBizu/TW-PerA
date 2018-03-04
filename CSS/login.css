@@ -1,11 +1,13 @@
 html {
-  background: url('./login.jpg') no-repeat center center fixed;
+  background: url('./login.gif') no-repeat center center fixed;
   background-size: cover;
   font-family: sans-serif;
 }
 
-.loginBox{
 
+
+
+.loginBox{
 
     width: 300px;
     height: 350px;
@@ -21,7 +23,6 @@ html {
     color: white;
 
 }
-
 
 #loginHeader{
   text-align: center;
@@ -83,8 +84,96 @@ html {
 
   border-radius: 10px;
   font-size: 20px;
-  
+
   color:black;
   background: white;
+
+}
+
+@media only screen
+and (min-device-width : 767px)
+and (max-device-width : 1025px)
+and (min-devide-height : 400px)
+{
+  .loginBox{
+
+      width: 60%;
+      height: 55%;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50% , -50%);
+
+      box-sizing: border-box;
+      padding: 50px;
+
+      background: rgba(0,0,0,0.6);
+      color: white;
+
+  }
+
+  #loginHeader{
+    text-align: center;
+
+    margin: 0px;
+    padding: 15px 0;
+
+    font-size: 40px;
+  }
+
+  .loginBox p{
+
+      margin: 0px;
+      padding: 20px 0 20px 0;
+      font-size: 30px;
+      font-weight: bold;
+  }
+
+  .loginBox input{
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .loginBox input[type="text"], input[type="password"]
+  {
+    border: none;
+    border-bottom: 1px solid white;
+    font-size: 25px;
+
+    background: transparent;
+    outline: none;
+    height: 20px;
+    color:white;
+
+  }
+
+  .loginBox input[type="submit"]
+  {
+    height: 35px;
+
+    border: none;
+    outline: :none;
+
+    border-radius: 30px;
+    font-size: 30px;
+
+    color:white;
+    background: #2bc2ff;
+  }
+
+  .loginBox input[type="submit"]:hover
+  {
+    height: 35px;
+
+    border: none;
+    outline: :none;
+
+    border-radius: 20px;
+    font-size: 30px;
+
+    color:black;
+    background: white;
+
+  }
 
 }
