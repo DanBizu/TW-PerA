@@ -5,6 +5,11 @@ html {
   padding: 40px;
 }
 
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family:"Helvetica Neue", Helvetica, Arial;
+}
 
 
 
@@ -83,4 +88,91 @@ html {
   text-decoration: none;
   cursor: pointer;
 
+}
+
+
+#sidebar{
+	background: transparent;
+	top: 0px;
+	width: 200px;
+	height: 100%;
+	display: block;
+	position: fixed;
+	left:-205px;
+	top:0px;
+	transition:left 0.2s linear;
+}
+
+#sidebar.visible{
+	left:0px;
+	transition:left 0.2s linear;
+}
+
+
+ul.sidebar {
+	margin: 0px;
+	padding: 0px;
+}
+
+li.sidebar-el{
+	list-style: none;
+}
+
+.sidebar-el{
+
+	font-size: 18px;
+	color: #ccc;
+	text-decoration: none;
+	background:#1C1E1F;
+	/*border-bottom:2px solid #111;*/
+	border-left: 5px solid lightblue;
+	display: block;
+	width: 165px;
+	padding:10px 10px 10px 15px;
+}
+
+.sidebar-el:visited {
+	color: white;
+}
+
+.sidebar-el:hover {
+	background: #303436;
+}
+
+#active {
+	background: green;
+}
+
+
+#sidebar-button {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 15px;
+	cursor: pointer;
+	margin: 15px;
+	position: absolute;
+	top: 0px;
+	right: -60px;
+}
+
+
+#sidebar-button span{
+	height: 1px;
+	background: #111;
+	margin-bottom: 5px;
+	display: block;
+}
+
+#sidebar-button span:nth-child(2){
+	width: 80%;
+}
+
+#sidebar-button span:nth-child(3){
+	width: 65%;
+}
+
+
+#sidebar-button.invisible span{
+	display: none;
 }
