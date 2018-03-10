@@ -157,22 +157,6 @@ li.sidebar-el a:hover {
 }
 
 
-#sidebar-button span{
-	height: 1px;
-	background: #111;
-	margin-bottom: 5px;
-	display: block;
-}
-
-#sidebar-button span:nth-child(2){
-	width: 80%;
-}
-
-#sidebar-button span:nth-child(3){
-	width: 65%;
-}
-
-
-#sidebar-button.invisible span{
+#sidebar-button.invisible {
 	display: none;
 }
