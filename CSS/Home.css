@@ -118,7 +118,7 @@ li.sidebar-el{
 	list-style: none;
 }
 
-.sidebar-el{
+li.sidebar-el a{
 
 	font-size: 18px;
 	color: #ccc;
@@ -135,7 +135,7 @@ li.sidebar-el{
 	color: white;
 }
 
-.sidebar-el:hover {
+li.sidebar-el a:hover {
 	background: #303436;
 }
 
