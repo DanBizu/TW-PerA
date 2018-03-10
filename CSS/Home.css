@@ -1,55 +1,86 @@
 html {
+    background: url('./login.gif') no-repeat center center fixed;
   background-size: cover;
   font-family: sans-serif;
-}
-
-#backVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+  padding: 40px;
 }
 
 
-.mainSidebar{
-  padding :none;
-  margin: none;
+
+
+.tableContainer {
+  border: 1px solid black;
+  width: 90%;
+  display: block;
+  margin-right:100px;
+  float:right;
+  top:250px;
+  margin-right: 10px;
+  padding: 10px;
+  background: linear-gradient(to right,black,transparent,black);
 }
 
-.mainSidebar ul{
-  list-style: none;
-  margin:none;
+.activityContainerButton{
+  background: none;
 }
 
-.mainSidebar ul li{
-  padding: 5px;
-  position: relative;
+.activityContainer{
+    border: 1px solid black;
+    margin: 1px;
+    color: white;
+    padding-left: 5px;
+    width: 100%;
+    padding:5px;
+    text-align: left;
+    margin-top: 3px;
+    background: linear-gradient(to right,rgba(0,0,0,0.2),transparent,black);
+}
+
+.activityName{
+  font-size: 25px;
+}
+
+.activityHour , .activityDate{
+  font-size: 17px;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  text-align: left;
+}
+
+.modalEdit{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top:0;
+  height: 100%;
+  width: 100%;
+  overflow:visible;
+  background: rgba(0,0,0,0.2);
+}
+
+.modalContent{
+  margin: 5px;
+  background:black;
   color: white;
-  width: 125px;
-  height: 35px;
-  background: rgba(0,0,0,0.6);
-  border-right:  1px solid white;
+  margin: 10% auto;
+  padding: 20px;
+  width: 70%;
+  box-shadow: 0 5px 6px 0 rgba(0,0,0,0.3);
 }
 
-.mainSidebar ul ul{
-  position: absolute;
-  visibility: collapse;
-  transition: all 0.3s;
-  opacity: 0;
-  left: 72%;
-  top: 0%;
+.modalClose{
+  float: right;
+  font-size: 20px;
+  color: white;
+  padding: 5px;
 }
 
-.mainSidebar ul li:hover > ul{
-    color:red;
-    position: absolute;
-    opacity: 1;
-    visibility: visible;
+.modalClose:hover,.modalClose:focus{
 
-}
-
-.mainSidebar ul li a{
-  color:white;
+  color:red;
   text-decoration: none;
+  cursor: pointer;
+
 }
