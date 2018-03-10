@@ -1,8 +1,7 @@
 html {
-    background: url('./login.gif') no-repeat center center fixed;
-  background-size: cover;
-  font-family: sans-serif;
-  padding: 40px;
+      background: url('./login.gif') no-repeat center center fixed;
+      background-size: cover;
+      font-family: sans-serif;
 }
 
 body {
@@ -149,6 +148,7 @@ li.sidebar-el a:hover {
 	vertical-align: middle;
 	width: 20px;
 	height: 15px;
+  font-size: 25px;
 	cursor: pointer;
 	margin: 15px;
 	position: absolute;

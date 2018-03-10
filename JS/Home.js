@@ -2,8 +2,6 @@ var modalBtn = document.getElementsByClassName('activityContainerButton');
 
 var closeBtn = document.getElementsByClassName('modalClose');
 
-
-
 for (var i = 0; i < modalBtn.length; i++) {
 
   var thisBtn = modalBtn[i];
