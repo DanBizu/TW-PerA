@@ -123,7 +123,7 @@ li.sidebar-el a{
 	font-size: 18px;
 	color: #ccc;
 	text-decoration: none;
-	background:#1C1E1F;
+	background:rgba(0,0,0,0.6);
 	/*border-bottom:2px solid #111;*/
 	border-left: 5px solid lightblue;
 	display: block;
