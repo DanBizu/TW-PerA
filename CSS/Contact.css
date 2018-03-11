@@ -1,5 +1,5 @@
 html {
-      background: url('./login.gif') no-repeat center center fixed;
+      background: url('./login.jpg') no-repeat center center fixed;
       background-size: cover;
       font-family: sans-serif;
 }
@@ -7,6 +7,21 @@ html {
 body {
 	margin: 0px;
 	padding: 0px;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 1px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
 }
 
 #sidebar{
@@ -58,7 +73,7 @@ li.sidebar-el a:hover {
 }
 
 #active {
-	background: green;
+	background: #b56b2b;
 }
 
 

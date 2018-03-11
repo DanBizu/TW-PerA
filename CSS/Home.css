@@ -1,5 +1,5 @@
 html {
-      background: url('./login.gif') no-repeat center center fixed;
+      background: url('./login.jpg') no-repeat center center fixed;
       background-size: cover;
       font-family: sans-serif;
 }
@@ -13,6 +13,7 @@ body {
 
 
 .tableContainer {
+  border-radius: 100%
   border: 1px solid black;
   width: 70%;
   display: block;
@@ -43,6 +44,7 @@ body {
 
 .activityName{
   font-size: 25px;
+
 }
 
 .activityHour , .activityDate{
@@ -61,18 +63,21 @@ body {
   top:0;
   height: 100%;
   width: 100%;
-  overflow:visible;
-  background: rgba(0,110,110,0.1);
+  background: rgba(0,0,0,0.5);
 }
 
 .modalContent{
   margin: 5px;
-  background:black;
+  background:rgba(0,0,0,0.9);
   color: white;
-  margin: 10% auto;
-  padding: 20px;
-  width: 70%;
-  box-shadow: 0 5px 6px 0 rgba(0,0,0,0.3);
+  margin:5% auto;
+  padding: 50px;
+  width: 50%;
+  max-height: 600px;
+  overflow:auto;
+  box-shadow: 0 5px 6px 0 rgba(0,0,0,0.2);
+  animation-name: modalAnimation;
+  animation-duration: 0.5s;
 }
 
 .modalClose{
@@ -90,6 +95,25 @@ body {
 
 }
 
+@keyframes modalAnimation {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 1px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+}
 
 #sidebar{
 	background: transparent;
@@ -140,7 +164,7 @@ li.sidebar-el a:hover {
 }
 
 #active {
-	background: green;
+	background: #b56b2b;
 }
 
 
@@ -159,5 +183,5 @@ li.sidebar-el a:hover {
 
 
 #sidebar-button.invisible {
-	display: none;
+  right: 150px;
 }
