@@ -160,25 +160,27 @@ li.sidebar-el a{
 }
 
 li.sidebar-el a:hover {
-	background: #303436;
+  background: rgba(166, 98, 44, 0.6);
+  color: white;
+
 }
 
 #active {
-	background: #b56b2b;
+  background: #b56b2b;
 }
 
 
 #sidebar-button {
-	display: inline-block;
-	vertical-align: middle;
-	width: 20px;
-	height: 15px;
+  display: inline-block;
+  color : #b56b1b;
+  width: 20px;
+  height: 15px;
   font-size: 25px;
-	cursor: pointer;
-	margin: 15px;
-	position: absolute;
-	top: 0px;
-	right: -60px;
+  cursor: pointer;
+  margin: 15px;
+  position: absolute;
+  top: 0px;
+  right: -60px;
 }
 
 
