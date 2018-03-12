@@ -69,7 +69,9 @@ li.sidebar-el a{
 }
 
 li.sidebar-el a:hover {
-	background: #303436;
+	background: rgba(166, 98, 44, 0.6);
+	color: white;
+
 }
 
 #active {
@@ -79,6 +81,7 @@ li.sidebar-el a:hover {
 
 #sidebar-button {
 	display: inline-block;
+	color : #b56b1b;
 	width: 20px;
 	height: 15px;
   font-size: 25px;
@@ -91,5 +94,5 @@ li.sidebar-el a:hover {
 
 
 #sidebar-button.invisible {
-	display: none;
+  right: 150px;
 }
