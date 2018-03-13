@@ -1,5 +1,5 @@
 html {
-      background: url('./login.jpg') no-repeat center center fixed;
+      background: url('../Images/login.jpg') no-repeat center center fixed;
       background-size: cover;
       font-family: sans-serif;
 }
@@ -13,7 +13,6 @@ body {
 
 
 .tableContainer {
-  border-radius: 100%
   border: 1px solid black;
   width: 70%;
   display: block;
