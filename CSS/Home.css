@@ -43,16 +43,31 @@ body {
 
 .activityName{
   font-size: 25px;
+  width: 90%;
 
 }
 
 .activityHour , .activityDate{
+  width: 100%;
   font-size: 17px;
   font-weight: bold;
   display: flex;
   justify-content: flex-end;
   text-align: left;
 }
+
+.deleteButton{
+  font-size: 30px;
+  width: 30px;
+  padding-left: 15px;
+}
+.deleteButton:hover{
+  font-size: 30px;
+  width: 30px;
+  color: red;
+  padding-left: 15px;
+}
+
 
 .modalEdit{
   display: none;

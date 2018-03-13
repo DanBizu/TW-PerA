@@ -73,13 +73,16 @@
 							</div>
 					</div>
 
-		<div class="tableContainer">
+		<div class="tableContainer", id="tableContainer1">
 
-			<div class="activityContainerButton" , id="activityContainerButton1" , data-modal="modalEdit1">
+			<button type="button" name="button" onclick="addElement()">asdas</button>
+
+			<div class="activityContainerButton" , id="activityContainerButton1" >
 						<table class="activityContainer" , id="activityContainer1" >
 							<tr>
-								<th rowspan="2" , class="activityName"> Tenis </th>
+								<th rowspan="2" , class="activityName" , data-modal="modalEdit1"> Tenis </th>
 								<td class="activityHour">17.00-19.00</td>
+								<th rowspan="2" , class="deleteButton"> <i class="fa fa-trash" , onclick="removeElement('tableContainer1','activityContainerButton1')"></i></th>
 							</tr>
 							<tr>
 								<td class="activityDate">23/06/2019</td>
@@ -87,11 +90,12 @@
 						</table>
 			</div>
 
-			<div class="activityContainerButton" , id="activityContainerButton2" , data-modal="modalEdit2">
+			<div class="activityContainerButton" , id="activityContainerButton2" >
 						<table class="activityContainer" , id="activityContainer2" >
 							<tr>
-								<th rowspan="2" , class="activityName">Fotbal </th>
+								<th rowspan="2" , class="activityName" , data-modal="modalEdit2">Fotbal </th>
 								<td class="activityHour" , id="activityHour2">17.00-19.00</td>
+								<th rowspan="2" , class="deleteButton"> <i class="fa fa-trash" , onclick="removeElement('tableContainer1','activityContainerButton2')"></i></th>
 							</tr>
 							<tr>
 								<td class="activityDate" , id="activityDate2">23/06/2019</td>
@@ -99,11 +103,12 @@
 						</table>
 			</div>
 
-			<div class="activityContainerButton" , id="activityContainerButton3" , data-modal="modalEdit3">
+			<div class="activityContainerButton" , id="activityContainerButton3" >
 						<table class="activityContainer" , id="activityContainer3" >
 							<tr>
-								<th rowspan="2" , class="activityName">Hochei </th>
+								<th rowspan="2" , class="activityName" , data-modal="modalEdit3">Hochei </th>
 								<td class="activityHour" , id="activityHour3">17.00-19.00</td>
+								<th rowspan="2" , class="deleteButton"> <i class="fa fa-trash" , onclick="removeElement('tableContainer1','activityContainerButton3')"></i></th>
 							</tr>
 							<tr>
 								<td class="activityDate" , id="activityDate3">23/06/2019</td>
@@ -111,11 +116,12 @@
 						</table>
 			</div>
 
-			<div class="activityContainerButton" , id="activityContainerButton4" , data-modal="modalEdit4">
+			<div class="activityContainerButton" , id="activityContainerButton4" >
 						<table class="activityContainer" , id="activityContainer4" >
 							<tr>
-								<th rowspan="2" , class="activityName">Baseball </th>
+								<th rowspan="2" , class="activityName" , data-modal="modalEdit4">Baseball </th>
 								<td class="activityHour" , id="activityHour4">17.00-19.00</td>
+								<th rowspan="2" , class="deleteButton"> <i class="fa fa-trash" , onclick="removeElement('tableContainer1','activityContainerButton4')"></i></th>
 							</tr>
 							<tr>
 								<td class="activityDate" , id="activityDate4">23/06/2019</td>
@@ -126,8 +132,9 @@
 			<div class="activityContainerButton" , id="activityContainerButton5" , data-modal="modalEdit5">
 						<table class="activityContainer" , id="activityContainer5" >
 							<tr>
-								<th rowspan="2" , class="activityName">Curling </th>
+								<th rowspan="2" , class="activityName" , data-modal="modalEdit5">Curling </th>
 								<td class="activityHour" , id="activityHour5">17.00-19.00</td>
+								<th rowspan="2" , class="deleteButton"> <i class="fa fa-trash" , onclick="removeElement('tableContainer1','activityContainerButton5')"></i></th>
 							</tr>
 							<tr>
 								<td class="activityDate" , id="activityDate5">23/06/2019</td>
@@ -137,7 +144,6 @@
 
 		</div>
 
-		<footer>asdaasda</footer>
 
 
 		<script src="../JS/Home.js"></script>
