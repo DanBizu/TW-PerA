@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title> Home </title>
+	<meta charset="UTF-8">
 	<link rel="stylesheet" href="../CSS/Home.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,12 +13,12 @@
 	<div id="sidebar">
 
 		<ul>
-			<li class="sidebar-el"><a href="Home.html", id="active">Home</a></li>
+			<li class="sidebar-el"><a href="Home.html" id="active">Home</a></li>
 			<li class="sidebar-el"><a href="Friends.html">Friends</a></li>
 			<li class="sidebar-el"><a href="Contact.html" >About us</a></li>
 			<li class="sidebar-el"><a href="login.html" >Logout</a></li>
 		</ul>
-		<i class="fa fa-bars" , id="sidebar-button"></i>
+		<i class="fa fa-bars"  id="sidebar-button"></i>
 
 
 	</div>
@@ -38,51 +39,81 @@
 
 	</script>
 
-					<div class="modalEdit" , id="modalEdit1">
-						<div class="modalContent" , , id="modalContent1">
-								<span class="modalClose" , data-modal="modalEdit1">&times</span>
-								<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
-							</div>
+					<div class="modalEdit"  id="modalEdit1">
+						<div class="modalContent"  id="modalContent1">
+								<span class="modalClose"  data-modal="modalEdit1">&times;</span>
+								<form class="" action="#" method="post">
+									Activity Name:<input type="text" name="" value=""><br>
+									Time frame: <select class="" name="">
+													<option value="">8:00</option>
+													<option value="">10:00</option>
+													<option value="">12:00</option>
+													<option value="">14:00</option>
+													<option value="">16:00</option>
+									</select>
+									      - <select class="" name="">
+													<option value="">8:00</option>
+													<option value="">10:00</option>
+													<option value="">12:00</option>
+													<option value="">14:00</option>
+													<option value="">16:00</option>
+									</select><br>
+									Location:	<input type="text" name="" value=""><br>
+									Type of activity: <select class="" name="">
+													<option value="">Sport</option>
+													<option value="">Work</option>
+													<option value="">School</option>
+													<option value="">Personal</option>
+													<option value="">Other</option>
+									</select><br>
+									Visibility: <select class="" name="">
+										<option value="">Visible</option>
+										<option value="">Private</option>
+									</select>
+									<input type="submit" name="" value="Test">
+								</form>
+
+								</div>
 					</div>
 
-					<div class="modalEdit" , id="modalEdit2">
-						<div class="modalContent" , , id="modalContent2">
-								<span class="modalClose" , data-modal="modalEdit2">&times</span>
+					<div class="modalEdit"  id="modalEdit2">
+						<div class="modalContent"  id="modalContent2">
+								<span class="modalClose"  data-modal="modalEdit2">&times;</span>
 							<p>2222222222222222222222222222222</p>
 							</div>
 					</div>
 
-					<div class="modalEdit" , id="modalEdit3">
-						<div class="modalContent" , , id="modalContent3">
-								<span class="modalClose" , data-modal="modalEdit3">&times</span>
+					<div class="modalEdit"  id="modalEdit3">
+						<div class="modalContent"  id="modalContent3">
+								<span class="modalClose"  data-modal="modalEdit3">&times;</span>
 							<p>333333333333333333333333333333</p>
 							</div>
 					</div>
 
-					<div class="modalEdit" , id="modalEdit4">
-						<div class="modalContent" , , id="modalContent4">
-								<span class="modalClose" , data-modal="modalEdit4">&times</span>
+					<div class="modalEdit"  id="modalEdit4">
+						<div class="modalContent"  id="modalContent4">
+								<span class="modalClose"  data-modal="modalEdit4">&times;</span>
 							<p>444444444444444444444444444444444</p>
 							</div>
 					</div>
 
-					<div class="modalEdit" , id="modalEdit5">
-						<div class="modalContent" , , id="modalContent5">
-								<span class="modalClose" , data-modal="modalEdit5">&times</span>
+					<div class="modalEdit"  id="modalEdit5">
+						<div class="modalContent"  id="modalContent5">
+								<span class="modalClose"  data-modal="modalEdit5">&times;</span>
 							<p>5555555555555555555555555555555555</p>
 							</div>
 					</div>
 
-		<div class="tableContainer", id="tableContainer1">
+		<div class="tableContainer" id="tableContainer1">
 
-			<button type="button" name="button" onclick="addElement()">asdas</button>
+			<button type="button" name="button" id="addButton" class="	fa fa-plus-square-o	" onclick="addElement()"></button>
 
-			<div class="activityContainerButton" , id="activityContainerButton1" >
-						<table class="activityContainer" , id="activityContainer1" >
+			<div class="activityContainerButton"  id="activityContainerButton1" >
+						<table class="activityContainer"  id="activityContainer1" >
 							<tr>
-								<th rowspan="2" , class="activityName" , data-modal="modalEdit1"> Tenis </th>
+								<th rowspan="2" class="activityName"  data-modal="modalEdit1"> Tenis </th>
 								<td class="activityHour">17.00-19.00</td>
-								<th rowspan="2" , class="deleteButton"> <i class="fa fa-trash" , onclick="removeElement('tableContainer1','activityContainerButton1')"></i></th>
+								<th rowspan="2"  class="deleteButton"> <i class="fa fa-trash"  onclick="removeElement('tableContainer1','activityContainerButton1')"></i></th>
 							</tr>
 							<tr>
 								<td class="activityDate">23/06/2019</td>
@@ -90,54 +121,54 @@
 						</table>
 			</div>
 
-			<div class="activityContainerButton" , id="activityContainerButton2" >
-						<table class="activityContainer" , id="activityContainer2" >
+			<div class="activityContainerButton"  id="activityContainerButton2" >
+						<table class="activityContainer" id="activityContainer2" >
 							<tr>
-								<th rowspan="2" , class="activityName" , data-modal="modalEdit2">Fotbal </th>
-								<td class="activityHour" , id="activityHour2">17.00-19.00</td>
-								<th rowspan="2" , class="deleteButton"> <i class="fa fa-trash" , onclick="removeElement('tableContainer1','activityContainerButton2')"></i></th>
+								<th rowspan="2"  class="activityName" data-modal="modalEdit2">Fotbal </th>
+								<td class="activityHour"  id="activityHour2">17.00-19.00</td>
+								<th rowspan="2"  class="deleteButton"> <i class="fa fa-trash"  onclick="removeElement('tableContainer1','activityContainerButton2')"></i></th>
 							</tr>
 							<tr>
-								<td class="activityDate" , id="activityDate2">23/06/2019</td>
-							</tr>
-						</table>
-			</div>
-
-			<div class="activityContainerButton" , id="activityContainerButton3" >
-						<table class="activityContainer" , id="activityContainer3" >
-							<tr>
-								<th rowspan="2" , class="activityName" , data-modal="modalEdit3">Hochei </th>
-								<td class="activityHour" , id="activityHour3">17.00-19.00</td>
-								<th rowspan="2" , class="deleteButton"> <i class="fa fa-trash" , onclick="removeElement('tableContainer1','activityContainerButton3')"></i></th>
-							</tr>
-							<tr>
-								<td class="activityDate" , id="activityDate3">23/06/2019</td>
+								<td class="activityDate"  id="activityDate2">23/06/2019</td>
 							</tr>
 						</table>
 			</div>
 
-			<div class="activityContainerButton" , id="activityContainerButton4" >
-						<table class="activityContainer" , id="activityContainer4" >
+			<div class="activityContainerButton"  id="activityContainerButton3" >
+						<table class="activityContainer"  id="activityContainer3" >
 							<tr>
-								<th rowspan="2" , class="activityName" , data-modal="modalEdit4">Baseball </th>
-								<td class="activityHour" , id="activityHour4">17.00-19.00</td>
-								<th rowspan="2" , class="deleteButton"> <i class="fa fa-trash" , onclick="removeElement('tableContainer1','activityContainerButton4')"></i></th>
+								<th rowspan="2"  class="activityName"  data-modal="modalEdit3">Hochei </th>
+								<td class="activityHour"  id="activityHour3">17.00-19.00</td>
+								<th rowspan="2"  class="deleteButton"> <i class="fa fa-trash"  onclick="removeElement('tableContainer1','activityContainerButton3')"></i></th>
 							</tr>
 							<tr>
-								<td class="activityDate" , id="activityDate4">23/06/2019</td>
+								<td class="activityDate"  id="activityDate3">23/06/2019</td>
 							</tr>
 						</table>
 			</div>
 
-			<div class="activityContainerButton" , id="activityContainerButton5" , data-modal="modalEdit5">
-						<table class="activityContainer" , id="activityContainer5" >
+			<div class="activityContainerButton"  id="activityContainerButton4" >
+						<table class="activityContainer"  id="activityContainer4" >
 							<tr>
-								<th rowspan="2" , class="activityName" , data-modal="modalEdit5">Curling </th>
-								<td class="activityHour" , id="activityHour5">17.00-19.00</td>
-								<th rowspan="2" , class="deleteButton"> <i class="fa fa-trash" , onclick="removeElement('tableContainer1','activityContainerButton5')"></i></th>
+								<th rowspan="2" class="activityName"  data-modal="modalEdit4">Baseball </th>
+								<td class="activityHour"  id="activityHour4">17.00-19.00</td>
+								<th rowspan="2"  class="deleteButton"> <i class="fa fa-trash" onclick="removeElement('tableContainer1','activityContainerButton4')"></i></th>
 							</tr>
 							<tr>
-								<td class="activityDate" , id="activityDate5">23/06/2019</td>
+								<td class="activityDate"  id="activityDate4">23/06/2019</td>
+							</tr>
+						</table>
+			</div>
+
+			<div class="activityContainerButton"  id="activityContainerButton5"  data-modal="modalEdit5">
+						<table class="activityContainer" id="activityContainer5" >
+							<tr>
+								<th rowspan="2" class="activityName"  data-modal="modalEdit5">Curling </th>
+								<td class="activityHour"  id="activityHour5">17.00-19.00</td>
+								<th rowspan="2"  class="deleteButton"> <i class="fa fa-trash"  onclick="removeElement('tableContainer1','activityContainerButton5')"></i></th>
+							</tr>
+							<tr>
+								<td class="activityDate"  id="activityDate5">23/06/2019</td>
 							</tr>
 						</table>
 			</div>

@@ -129,6 +129,15 @@ body {
     border-radius: 10px;
 }
 
+#addButton{
+  font-size: 25px;
+  background: none;
+  color: white;
+  margin: none;
+  border: none;
+}
+
+
 #sidebar{
 	background: transparent;
 	top: 0px;
