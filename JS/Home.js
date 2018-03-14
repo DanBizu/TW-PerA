@@ -43,11 +43,14 @@ function removeElement(parentDiv, childDiv){
 }
 
 function addElement() {
-
     var p = document.getElementById('tableContainer1');
+<<<<<<< HEAD
     var newElement = document.createElement("DIV" , 'activityContainerButton1');
     newElement.innerHTML = '<div class="activityContainerButton" , id="activityContainerButton1" ><table class="activityContainer" , id="activityContainer1" ><tr><th rowspan="2" , class="activityName" , data-modal="modalEdit1"> Tenis </th><td class="activityHour">17.00-19.00</td><th rowspan="2" , class="deleteButton"> <i class="fa fa-trash" , onclick="removeElement('+'tableContainer1'+','+ 'activityContainerButton1'+')"></i></th>	</tr><tr><td class="activityDate">23/06/2019</td></tr> </table>	</div>'
       newElement.innerHTML.color="white";
+=======
+    var newElement = document.createElement("DIV");
+    newElement.innerHTML = '<div class="activityContainerButton" , id="activityContainerButton1" >	<table class="activityContainer" , id="activityContainer1" >	<tr><th rowspan="2" , class="activityName" , data-modal="modalEdit1"> Tenis </th>	<td class="activityHour">17.00-19.00</td></tr><tr>	<td class="activityDate">23/06/2019</td>	</tr>	</table>	</div>'
+>>>>>>> 5ce91a54efb74fc107fcec78928eddd06fb2e733
     p.appendChild(newElement);
-
 }
