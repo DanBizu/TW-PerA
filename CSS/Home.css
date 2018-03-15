@@ -216,7 +216,7 @@ li.sidebar-el a:hover {
 }
 
 
-@media screen and  (max-height: 550px) and (orientation: landscape){
+@media screen and  (orientation: landscape){
 
   .tableContainer {
     width: 80%;
@@ -262,7 +262,7 @@ li.sidebar-el a:hover {
 
 }
 
-@media screen and (max-width: 550px) and (orientation: portrait) {
+@media screen and (orientation: portrait) {
 
   .tableContainer {
     width: 95%;
