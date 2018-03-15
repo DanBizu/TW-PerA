@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="../CSS/Contact.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="../JS/Contact.js"></script>
 </head>
 <body>
 
@@ -17,22 +18,11 @@
 					<li class="sidebar-el"><a href="login.html" >Logout</a></li>
 				</ul>
 
-		<i class="fa fa-bars" , id="sidebar-button"></i>
+	<i class="fa fa-bars" id="sidebar-button" onclick="ExpandSidebar()"></i>
 
 
 	</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script>
-
-	$(document).ready(function(){
-		$('#sidebar-button').click(function(){
-			$('#sidebar').toggleClass('visible');
-			$('#sidebar-button').toggleClass('invisible');
-		});
-
-	});
-	</script>
 
 </body>
 </html>
