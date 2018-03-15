@@ -43,7 +43,7 @@ function removeElement(parentDiv, childDiv){
 }
 
 function addElement() {
-    var p = document.getElementById('tableContainer1');
+    var p = document.getElementById('scrollTab');
     var newElement = document.createElement("DIV" );
     newElement.innerHTML = '<table class="activityContainer" , id="activityContainer1" ><tr><th rowspan="2" , class="activityName" , data-modal="modalEdit1"> Tenis </th><td class="activityHour">17.00-19.00</td><th rowspan="2" , class="deleteButton"> <i class="fa fa-trash" , onclick="removeElement('+'tableContainer1'+','+ 'activityContainerButton1'+')"></i></th>	</tr><tr><td class="activityDate">23/06/2019</td></tr> </table>'
     newElement.setAttribute("class","activityContainerButton")
