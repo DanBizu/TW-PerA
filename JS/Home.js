@@ -27,6 +27,7 @@ for (var i = 0; i < modalBtn.length; i++) {
 
 }
 
+
 function removeElement(childDiv){
 
       if (document.getElementById(childDiv)) {
@@ -41,6 +42,7 @@ function removeElement(childDiv){
 }
 
 var number=5;
+
 function addElement() {
     var aux = 'activityContainerButton' + number;
     var aux2 = "'"+aux+"'";
