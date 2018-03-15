@@ -27,13 +27,11 @@ for (var i = 0; i < modalBtn.length; i++) {
 
 }
 
-function removeElement(parentDiv, childDiv){
-     if (childDiv == parentDiv) {
-          alert("The parent div cannot be removed.");
-     }
-     else if (document.getElementById(childDiv)) {
+function removeElement(childDiv){
+
+      if (document.getElementById(childDiv)) {
           var child = document.getElementById(childDiv);
-          var parent = document.getElementById(parentDiv);
+          var parent = document.getElementById('scrollTab');
           parent.removeChild(child);
      }
      else {
@@ -42,16 +40,19 @@ function removeElement(parentDiv, childDiv){
      }
 }
 
+var number=5;
 function addElement() {
+    var aux = 'activityContainerButton' + number;
+    var aux2 = "'"+aux+"'";
     var p = document.getElementById('scrollTab');
     var newElement = document.createElement("DIV" );
-    newElement.innerHTML = '<table class="activityContainer" , id="activityContainer1" ><tr><th rowspan="2" , class="activityName" , data-modal="modalEdit1"> Tenis </th><td class="activityHour">17.00-19.00</td><th rowspan="2" , class="deleteButton"> <i class="fa fa-trash" , onclick="removeElement('+'tableContainer1'+','+ 'activityContainerButton1'+')"></i></th>	</tr><tr><td class="activityDate">23/06/2019</td></tr> </table>'
+    newElement.innerHTML = '<table class="activityContainer" , id="activityContainer' + number +' " ><tr><th rowspan="2" , class="activityName" , data-modal="modalEdit1"> Tenis </th><td class="activityHour">17.00-19.00</td><th rowspan="2" , class="deleteButton"> <i class="fa fa-trash" , onclick="removeElement(' +  aux2  + ')"></i></th>	</tr><tr><td class="activityDate">23/06/2019</td></tr> </table>'
     newElement.setAttribute("class","activityContainerButton")
-    newElement.setAttribute("id","activityContainerButton1")
-      newElement.innerHTML.color="white";
+    newElement.setAttribute("id",aux)
+    newElement.innerHTML.color="white";
     p.appendChild(newElement);
+    number++;
 }
-
 
 function ExpandSidebar(){
   var button = document.getElementById("sidebar-button");
