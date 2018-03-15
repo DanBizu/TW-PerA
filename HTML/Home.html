@@ -19,23 +19,11 @@
 			<li class="sidebar-el"><a href="Contact.html" >About us</a></li>
 			<li class="sidebar-el"><a href="login.html" >Logout</a></li>
 		</ul>
-		<i class="fa fa-bars"  id="sidebar-button"></i>
+	<i class="fa fa-bars" id="sidebar-button" onclick="ExpandSidebar()"></i>
 
 
 	</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script>
-
-		$(document).ready(function(){
-			$('#sidebar-button').click(function(){
-				$('#sidebar').toggleClass('visible');
-				$('#sidebar-button').toggleClass('invisible');
-			});
-		});
-
-
-	</script>
 
 					<div class="modalEdit"  id="modalEdit1">
 						<div class="modalContent"  id="modalContent1">

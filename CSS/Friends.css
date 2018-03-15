@@ -110,7 +110,11 @@ main h1{
 }
 
 main table{
-	background: linear-gradient(to right, rgba(59, 63, 82, 0.72), rgb(109, 114, 139, 0.8));
+	background: linear-gradient(to right, rgba(59, 63, 82, 0.72), rgba(109, 114, 139, 0.8));
+}
+
+main table th{
+	border-bottom: 1px solid black;
 }
 
 td img{
