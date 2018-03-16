@@ -41,7 +41,9 @@ function removeElement(childDiv){
      }
 }
 
+
 var number=5;
+
 
 function addElement() {
     var aux = 'activityContainerButton' + number;

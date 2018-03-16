@@ -15,10 +15,9 @@ body {
 .tableContainer {
   border: 1px solid black;
   width: 70%;
-  height: 70%;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-right:10px;
-  max-height: 70vw;
+  max-height: 86vh;
   float:right;
   padding: 10px;
   background: linear-gradient(to right,black,transparent,black);
@@ -26,8 +25,8 @@ body {
 
 .tableContainer #scrollTab{
   max-width: 100%;
-   overflow-x: hidden;
-  max-height: 65vw;
+  overflow-x: hidden;
+  max-height: 80vh;
   overflow-y: scroll;
 }
 
@@ -216,11 +215,11 @@ li.sidebar-el a:hover {
 }
 
 
-@media screen and  (orientation: landscape){
+@media screen and  (orientation: landscape) and (max-height: 450px){
 
   .tableContainer {
-    width: 80%;
-    max-height: 60vw;
+    width: 70vw;
+    max-height: 93vh;
     margin-top:5px;
     background: linear-gradient(to right,black,transparent,black);
   }
@@ -228,7 +227,7 @@ li.sidebar-el a:hover {
  .tableContainer #scrollTab{
     max-width: 100%;
     overflow-x: hidden;
-    max-height: 45vw;
+    max-height: 80vh;
     overflow-y: scroll;
   }
   .activityName{
@@ -238,7 +237,7 @@ li.sidebar-el a:hover {
   }
 
   .activityHour , .activityDate{
-    font-size: 15px;
+    font-size: 10px;
   }
 
 
@@ -262,11 +261,12 @@ li.sidebar-el a:hover {
 
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 600px){
 
   .tableContainer {
     width: 95%;
-    max-height: 135vh;
+    margin-top:10vh;
+    max-height: 90vh;
     margin: none;
     background: linear-gradient(to right,black,transparent,black);
   }
@@ -274,7 +274,7 @@ li.sidebar-el a:hover {
    .tableContainer #scrollTab{
       max-width: 100%;
       overflow-x: hidden;
-      max-height: 135vw;
+      max-height: 80vh;
       overflow-y: scroll;
     }
 
@@ -312,7 +312,6 @@ li.sidebar-el a:hover {
   }
 
 }
-
 
 @media screen and (max-width: 767px) and (orientation: portrait){
   #sidebar{
