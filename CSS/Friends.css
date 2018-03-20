@@ -210,6 +210,7 @@ td img{
 		display: block;
 		transition: none;
 		background: rgba(0,0,0,0.6);
+		z-index: 1;
 	}
 
 	#sidebar ul{
@@ -323,7 +324,53 @@ td img{
 	}
 
 	main{
+		width: 90%;
 		left: 120px;
-		margin-left: 3%;
+		margin-left: 2%;
+		top:0px;
 	}
+
+	main h1{
+		font-size: 25px;
+	}
+	@keyframes modalAnimation {
+  		0% {opacity: 0;}
+  		100% {opacity: 1;}
+	}
+
+	.tableContainer {
+    	width: 100%;
+    	word-wrap: break-word;
+    	animation-name: modalAnimation;
+    	animation-duration: 0.5s;
+    	background:rgba(0,0,0,0.9);
+    	color: white;
+    	margin:5% auto;
+  		max-height: 600px;
+  		overflow:auto;
+  		box-shadow: 0 5px 6px 0 rgba(0,0,0,0.2);
+  		z-index: -1;
+  		position: relative;
+  	}
+
+  	.tableContainer #scrollTab{
+      max-width: 100%;
+      overflow-x: hidden;
+      max-height: 80vh;
+      overflow-y: scroll;
+    }
+
+    .activityName{
+    	font-size: 15px;
+    	width: 90%;
+  	}
+
+  	.activityHour , .activityDate{
+    	width: 100%;
+    	font-size: 15px;
+   	 	font-weight: bold;
+    	display: flex;
+    	justify-content: flex-end;
+    	text-align: left;
+  	}
 }
