@@ -5,7 +5,6 @@
 	<link rel="stylesheet" href="../CSS/Friends.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="../JS/Friends.js"></script>
 </head>
 <body>
 
@@ -27,21 +26,89 @@
 		<header>
 			<h1>PerA</h1>
 		</header>
-		<table>
+		<table class="FriendsTable">
 			<tr>
 				<th>Profile</th>
 				<th>Name</th>
 			</tr>
-			<tr class="fExpand" onclick="Expand()">
+			<tr class="Friend">
 				<td><img src="../Images/Profile.png" class="profilePics"></td>
 				<td>Popovici Popa</td>
 			</tr>
+			<tr class="Friend">
+				<td><img src="../Images/Profile1.jpg" class="profilePics"></td>
+				<td>Ionescu Ion</td>
+			</tr>
 		</table>
+	
+		<div class="tableContainer" id="toBeExpanded">
 
-		<p id="toBeExpanded">ASDASSADSADASDS.<br>
+			<div id="scrollTab">
 
-		</p>
+				<div class="activityContainerButton">
+					<table class="activityContainer">
+						<tr>
+							<th rowspan="2" class="activityName"> Tenis </th>
+							<td class="activityHour">17.00-19.00</td>
+						</tr>
+						<tr>
+							<td class="activityDate">23/06/2019</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="activityContainerButton">
+					<table class="activityContainer">
+						<tr>
+							<th rowspan="2"  class="activityName">Fotbal </th>
+							<td class="activityHour">17.00-19.00</td>
+						</tr>
+						<tr>
+							<td class="activityDate">23/06/2019</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="activityContainerButton">
+					<table class="activityContainer">
+						<tr>
+							<th rowspan="2"  class="activityName">Hochei </th>
+							<td class="activityHour">17.00-19.00</td>
+						</tr>
+							<tr>
+								<td class="activityDate">23/06/2019</td>
+							</tr>
+					</table>
+				</div>
+
+				<div class="activityContainerButton">
+					<table class="activityContainer">
+						<tr>
+							<th rowspan="2" class="activityName">Baseball </th>
+							<td class="activityHour">17.00-19.00</td>
+						</tr>
+						<tr>
+							<td class="activityDate">23/06/2019</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="activityContainerButton">
+					<table class="activityContainer">
+						<tr>
+							<th rowspan="2" class="activityName">Curling </th>
+							<td class="activityHour">17.00-19.00</td>
+						</tr>
+						<tr>
+							<td class="activityDate">23/06/2019</td>
+						</tr>
+					</table>
+				</div>
+
+			</div>
+
+		</div>
 	</main>
-
+	<script src="../JS/Friends.js"></script>
 </body>
 </html>

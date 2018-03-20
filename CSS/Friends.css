@@ -91,10 +91,9 @@ li.sidebar-el a:hover {
 }
 
 main{
-	width: 70%;
-	left: 260px;
-	top: 10%;
-	display: block;
+	width: 80%;
+	left: 230px;
+	top: 5%;
 	position: absolute;
 }
 
@@ -104,14 +103,23 @@ main h1{
 
 main table{
 	background: linear-gradient(to right, rgba(59, 63, 82, 0.72), rgba(109, 114, 139, 0.8));
+	display: inline-block;
 }
 
 main table td{
 	cursor: pointer;
 }
 
-main table th{
+main table.FriendsTable th{
 	border-bottom: 1px solid black;
+}
+
+.Friend {
+    cursor: pointer;
+}
+
+.active, .Friend:hover {
+    background-color: #ccc; 
 }
 
 td img{
@@ -122,10 +130,57 @@ td img{
 }
 
 #toBeExpanded{
-	color: white;
 	display: none;
+	float: right;
 }
 
+.tableContainer {
+  border: 1px solid black;
+  width: 80%;
+  margin-top: 0px;
+  margin-right:10px;
+  max-height: 86vh;
+  display: inline-block;
+  padding: 10px;
+  background: linear-gradient(to right,black,transparent,black);
+}
+
+.tableContainer #scrollTab{
+  max-width: 100%;
+  overflow-x: hidden;
+  max-height: 80vh;
+  overflow-y: scroll;
+}
+
+.activityContainerButton{
+  background: none;
+}
+
+.activityContainer{
+    border: 1px solid black;
+    margin: 1px;
+    color: white;
+    padding-left: 5px;
+    width: 100%;
+    padding:5px;
+    text-align: left;
+    margin-top: 3px;
+    background: linear-gradient(to right,rgba(0,0,0,0.2),transparent,black);
+}
+
+.activityName{
+  font-size: 25px;
+  width: 90%;
+}
+
+.activityHour , .activityDate{
+  width: 100%;
+  font-size: 17px;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  text-align: left;
+}
 
 @media screen and (max-width: 767px) and (orientation: portrait){
 	#sidebar{

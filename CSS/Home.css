@@ -50,7 +50,6 @@ body {
 .activityName{
   font-size: 25px;
   width: 90%;
-
 }
 
 .activityHour , .activityDate{
@@ -67,6 +66,7 @@ body {
   width: 30px;
   padding-left: 15px;
 }
+
 .deleteButton:hover{
   font-size: 30px;
   width: 30px;
