@@ -9,6 +9,42 @@ body {
 	padding: 0px;
 }
 
+
+.mainAbout{
+  margin-right: 15px;
+  top:50px;
+  position: fixed;
+  left: 15%;
+  width: 80vw;
+  grid-gap: 1em;
+  display: grid;
+  color: white;
+
+}
+
+#quote{
+  font-size: 50px;
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+#socialMedia{
+  background: black;
+  grid-row: 2/3;
+  color: white;
+  font-size: 30px;
+}
+
+.mainAbout > div{
+  background: linear-gradient(to right,black,transparent,black);
+  padding: 1em;
+}
+
+.mainAbout > div:nth-child(odd){
+  background: linear-gradient(to right,black,transparent,black);
+  padding: 1em;
+}
+
+
 ::-webkit-scrollbar {
     width: 2px;
 }
