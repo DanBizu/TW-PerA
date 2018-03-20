@@ -24,6 +24,16 @@ html {
 
 }
 
+#profilPic{
+  top:-20%;
+  left: calc(50% - 16%);
+  position: absolute;
+  width:100px;
+  height: 100px;
+  border-radius: 120%;
+  float: right;
+}
+
 #loginHeader{
   text-align: center;
 
