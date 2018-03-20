@@ -1,10 +1,13 @@
 var acc = document.getElementsByClassName("Friend");
 var table = document.getElementById("toBeExpanded");
 var i;
+var closeBtn = document.getElementById("modalClose");
+
+
 
 for (i = 0; i < acc.length; i++) {
     acc[i].onclick = function(){
-    	if(table.style.display == "none"){
+    	if(table.style.display === "none"){
     		table.style.display = "block";
     		this.className = "active";
     	} else {
@@ -13,6 +16,11 @@ for (i = 0; i < acc.length; i++) {
     	}
     }
 }
+
+closeBtn.onclick = function(){
+	table.style.display = "none";
+}
+
 
 function ExpandSidebar(){
 	var button = document.getElementById("sidebar-button");
