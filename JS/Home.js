@@ -1,7 +1,27 @@
 var modalBtn = document.getElementsByClassName('activityName');
 
 var closeBtn = document.getElementsByClassName('modalClose');
+/*
+var addButton = document.getElementById("addButton");
 
+
+addButton.onclick = function(){
+
+  var modal = document.getElementById(this.dataset.modal);
+  modal.style.display = "block";
+
+  window.onclick = function(event) {
+  if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+
+
+}
+
+
+*/
 for (var i = 0; i < modalBtn.length; i++) {
 
   var thisBtn = modalBtn[i];
@@ -26,6 +46,8 @@ for (var i = 0; i < modalBtn.length; i++) {
   }
 
 }
+
+
 
 
 function removeElement(childDiv){
