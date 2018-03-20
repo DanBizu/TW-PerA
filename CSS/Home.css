@@ -107,8 +107,7 @@ body {
   padding: 5px;
 }
 
-.modalClose:hover,.modalClose:focus{
-
+.modalClose:hover{
   color:red;
   text-decoration: none;
   cursor: pointer;

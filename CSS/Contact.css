@@ -16,6 +16,7 @@ body {
   position: fixed;
   left: 15%;
   width: 80vw;
+  max-height: 80vh;
   grid-gap: 1em;
   display: grid;
   color: white;
@@ -23,15 +24,34 @@ body {
 }
 
 #quote{
-  font-size: 50px;
-  grid-column: 1/3;
+  font-size: 45px;
+  grid-column: 1/5;
+  text-align-last: center;
+  grid-row: 1/2;
+}
+#aboutUs{
+  grid-column: 1/4;
   grid-row: 2/3;
 }
+#aboutUs2{
+  grid-column: 1/4;
+  grid-row: 3/4;
+}
+#aboutUs3{
+  grid-column: 1/4;
+  grid-row: 4/5;
+}
+#aboutUs4{
+  grid-column: 1/4;
+  grid-row: 5/6;
+}
 #socialMedia{
-  background: black;
-  grid-row: 2/3;
+  background: rgba(0,0,0,0.9);
+  grid-row: 2/6;
+  font-size: 50px;
+  grid-column: 4/5;
+  text-align: center;
   color: white;
-  font-size: 30px;
 }
 
 .mainAbout > div{
@@ -134,6 +154,49 @@ li.sidebar-el a:hover {
 }
 
 @media screen and (max-width: 767px) and (orientation: portrait){
+
+  .mainAbout{
+    margin: 5px;
+    top:50px;
+    position: fixed;
+    left: 5px;
+    right:5px;
+    width: 97vw;
+    max-height: 90vh;
+    grid-gap: 1em;
+    display: grid;
+    color: white;
+
+  }
+
+  #quote{
+    grid-column: 1/5;
+    grid-row: 1/4;
+    font-size: 20px;
+    text-align-last: center;
+  }
+  #aboutUs{
+    grid-column: 1/4;
+    grid-row: 4/6;
+  }
+  #aboutUs2{
+    grid-column: 1/4;
+    grid-row: 6/8;
+  }
+  #aboutUs3{
+    grid-column: 1/4;
+    grid-row: 8/10;
+  }
+  #aboutUs4{
+    grid-column: 1/4;
+    grid-row: 10/12;
+  }
+  #socialMedia{
+    grid-row: 4/12;
+    grid-column: 4/5;
+    font-size: 30px;
+  }
+
 	#sidebar{
 		width: 100%;
 		height: 47px;
@@ -189,6 +252,50 @@ li.sidebar-el a:hover {
 }
 
 @media screen and (max-width: 959px) and (orientation: landscape){
+
+  .mainAbout{
+    margin: 5px;
+    margin-right: 20px;
+    top:5px;
+    position: fixed;
+    left: 20vw;
+    right:5px;
+    width: 75vw;
+    max-height: 90vh;
+    grid-gap: 1em;
+    display: grid;
+    color: white;
+
+  }
+
+  #quote{
+    grid-column: 1/15;
+    grid-row: 1/2;
+    font-size: 20px;
+  }
+  #aboutUs{
+    grid-column: 1/14;
+    grid-row: 2;
+  }
+  #aboutUs2{
+    grid-column: 1/14;
+    grid-row: 3;
+  }
+  #aboutUs3{
+    grid-column: 1/14;
+    grid-row:4;
+  }
+  #aboutUs4{
+    grid-column: 1/14;
+    grid-row: 5;
+  }
+  #socialMedia{
+    grid-row: 2/6;
+    grid-column: 14/15;
+    font-size: 30px;
+    padding: none;
+  }
+
 	#sidebar{
 		left: 0px;
 		margin: 0px;
