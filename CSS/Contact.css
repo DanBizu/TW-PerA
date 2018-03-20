@@ -262,7 +262,7 @@ li.sidebar-el a:hover {
     right:5px;
     width: 75vw;
     max-height: 90vh;
-    grid-gap: 1em;
+    grid-gap: 2px;
     display: grid;
     color: white;
 
@@ -271,7 +271,7 @@ li.sidebar-el a:hover {
   #quote{
     grid-column: 1/15;
     grid-row: 1/2;
-    font-size: 20px;
+    font-size: 15px;
   }
   #aboutUs{
     grid-column: 1/14;
