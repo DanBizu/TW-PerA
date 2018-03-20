@@ -294,7 +294,7 @@ li.sidebar-el a:hover {
     grid-row: 2/6;
     grid-column: 14/15;
     font-size: 30px;
-    padding: none;
+    padding: 0;
   }
 
 	#sidebar{

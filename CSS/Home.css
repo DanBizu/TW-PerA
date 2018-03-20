@@ -136,8 +136,8 @@ body {
   font-size: 25px;
   background: none;
   color: white;
-  margin: none;
-  border: none;
+  margin: 0;
+  border: 0;
 }
 
 
@@ -266,7 +266,7 @@ li.sidebar-el a:hover {
     width: 95%;
     margin-top:10vh;
     max-height: 90vh;
-    margin: none;
+    margin: 0;
     background: linear-gradient(to right,black,transparent,black);
   }
 

@@ -51,12 +51,14 @@ html {
     font-weight: bold;
 }
 
+
 .loginBox input{
   width: 100%;
   margin-bottom: 30px;
 }
 
-.loginBox input[type="text"], input[type="password"]
+
+.loginBox input[type="text"],.loginBox input[type="password"]
 {
   border: none;
   border-bottom: 1px solid white;
@@ -75,7 +77,7 @@ html {
   height: 25px;
 
   border: none;
-  outline: :none;
+  outline: none;
 
   border-radius: 10px;
   font-size: 20px;
@@ -90,7 +92,7 @@ html {
   height: 25px;
 
   border: none;
-  outline: :none;
+  outline: none;
 
   border-radius: 10px;
   font-size: 20px;
@@ -103,7 +105,7 @@ html {
 @media only screen
 and (min-device-width : 767px)
 and (max-device-width : 1025px)
-and (min-devide-height : 400px)
+and (min-device-height : 400px)
 {
   .loginBox{
 
@@ -144,7 +146,7 @@ and (min-devide-height : 400px)
     margin-bottom: 60px;
   }
 
-  .loginBox input[type="text"], input[type="password"]
+  .loginBox input[type="text"],.loginBox input[type="password"]
   {
     border: none;
     border-bottom: 1px solid white;
@@ -162,7 +164,7 @@ and (min-devide-height : 400px)
     height: 35px;
 
     border: none;
-    outline: :none;
+    outline:none;
 
     border-radius: 30px;
     font-size: 30px;
@@ -176,7 +178,7 @@ and (min-devide-height : 400px)
     height: 35px;
 
     border: none;
-    outline: :none;
+    outline: none;
 
     border-radius: 20px;
     font-size: 30px;
