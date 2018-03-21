@@ -34,7 +34,12 @@ body {
 .activityContainerButton{
   background: none;
 }
-
+#timeRepeat{
+  background: transparent;
+  border:none;
+  color:white;
+  float:right;
+}
 .activityContainer{
     border: 1px solid black;
     margin: 1px;
