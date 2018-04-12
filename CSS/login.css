@@ -4,188 +4,399 @@ html {
   font-family: sans-serif;
 }
 
-
-
-
 .loginBox{
 
-    width: 300px;
-    height: 350px;
+    width: 20vw;
+    height: 45vh;
+    min-width: 250px;
+    min-height: 300px;
     top: 50%;
     left: 50%;
     position: absolute;
     transform: translate(-50% , -50%);
 
     box-sizing: border-box;
-    padding: 25px;
+    padding: 20px;
 
     background: rgba(0,0,0,0.6);
     color: white;
-
 }
 
-#profilPic{
-  top:-20%;
-  left: calc(50% - 16%);
-  position: absolute;
-  width:100px;
-  height: 100px;
-  border-radius: 120%;
-  float: right;
-}
 
 #loginHeader{
-  text-align: center;
+    text-align: center;
 
-  margin: 0px;
-  padding: 15px 0;
+    margin: 0;
+    padding: 15px 0;
 
-  font-size: 25px;
+    font-size: 35px;
+    font-weight: bold;
 }
 
 
-.loginBox p{
+.loginBox label{
 
-    margin: 0px;
+    margin: 0;
     padding: 10px 0 5px 0;
+
     font-weight: bold;
 }
 
 
 .loginBox input{
-  width: 100%;
-  margin-bottom: 30px;
+    width: 100%;
+    margin-bottom: 30px;
 }
 
 
 .loginBox input[type="text"],.loginBox input[type="password"]
 {
-  border: none;
-  border-bottom: 1px solid white;
-  font-size: 15px;
-
-  background: transparent;
-  outline: none;
-  height: 20px;
-  color:white;
-
+    border: none;
+    border-bottom: 1px solid white;
+    font-size: 20px;
+    background: transparent;
+    outline: none;
+    height: 25px;
+    color:white;
 
 }
 
 .loginBox input[type="submit"]
 {
-  height: 25px;
+    height: 25px;
+    text-align: center;
+    bottom: 10px;
+    width: 100%;
+    border: none;
+    outline: none;
 
-  border: none;
-  outline: none;
+    border-radius: 10px;
+    font-size: 20px;
 
-  border-radius: 10px;
-  font-size: 20px;
-
-  color:white;
-  background: #2bc2ff;
-
+    color:white;
+    background: #2bc2ff;
 }
 
 .loginBox input[type="submit"]:hover
 {
-  height: 25px;
-
-  border: none;
-  outline: none;
-
-  border-radius: 10px;
-  font-size: 20px;
-
-  color:black;
-  background: white;
-
-}
-
-@media only screen
-and (min-device-width : 767px)
-and (max-device-width : 1025px)
-and (min-device-height : 400px)
-{
-  .loginBox{
-
-      width: 60%;
-      height: 55%;
-      top: 50%;
-      left: 50%;
-      position: absolute;
-      transform: translate(-50% , -50%);
-
-      box-sizing: border-box;
-      padding: 50px;
-
-      background: rgba(0,0,0,0.6);
-      color: white;
-
-  }
-
-  #loginHeader{
-    text-align: center;
-
-    margin: 0px;
-    padding: 15px 0;
-
-    font-size: 40px;
-  }
-
-  .loginBox p{
-
-      margin: 0px;
-      padding: 20px 0 20px 0;
-      font-size: 30px;
-      font-weight: bold;
-  }
-
-  .loginBox input{
-    width: 100%;
-    margin-bottom: 60px;
-  }
-
-  .loginBox input[type="text"],.loginBox input[type="password"]
-  {
-    border: none;
-    border-bottom: 1px solid white;
-    font-size: 25px;
-
-    background: transparent;
-    outline: none;
-    height: 20px;
-    color:white;
-
-  }
-
-  .loginBox input[type="submit"]
-  {
-    height: 35px;
-
-    border: none;
-    outline:none;
-
-    border-radius: 30px;
-    font-size: 30px;
-
-    color:white;
-    background: #2bc2ff;
-  }
-
-  .loginBox input[type="submit"]:hover
-  {
-    height: 35px;
+    height: 25px;
 
     border: none;
     outline: none;
 
-    border-radius: 20px;
-    font-size: 30px;
+    border-radius: 10px;
+    font-size: 20px;
 
     color:black;
     background: white;
 
-  }
+}
+#controlPanel{
+    display: inline;
+}
+#submitDiv{
+    float:left;
+    width: 50%;
+}
+#registerDiv{
+    float:right;
+    margin-right: 10px;
+    width: 40%;
+}
 
+.registerBox{
+
+    width: 20vw;
+    height: 45vh;
+    min-width: 250px;
+    min-height: 300px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50% , -50%);
+    display: none;
+    box-sizing: border-box;
+    padding: 20px;
+
+    background: rgba(0,0,0,0.6);
+    color: white;
+}
+
+
+#registerHeader{
+    text-align: center;
+
+    margin: 0;
+    padding: 15px 0;
+
+    font-size: 35px;
+    font-weight: bold;
+}
+
+
+.registerBox label{
+
+    margin: 0;
+    padding: 10px 0 5px 0;
+
+    font-weight: bold;
+}
+
+
+.registerBox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+
+.registerBox input[type="text"],.registerBox input[type="password"] , .registerBox input[type="email"]
+{
+    border: none;
+    border-bottom: 1px solid white;
+    font-size: 20px;
+    background: transparent;
+    outline: none;
+    height: 25px;
+    color:white;
+
+}
+
+.registerBox input[type="submit"]
+{
+    height: 25px;
+    text-align: center;
+
+    bottom: 10px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 10px;
+    font-size: 20px;
+
+    color:white;
+    background: #2bc2ff;
+}
+
+.registerBox input[type="submit"]:hover
+{
+    height: 25px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 10px;
+    font-size: 20px;
+
+    color:black;
+    background: white;
+
+}
+
+#registerButton{
+    height: 25px;
+    text-align: center;
+    bottom: 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+
+    border-radius: 10px;
+    font-size: 20px;
+
+    color:white;
+    background: #2bc2ff;
+}
+
+#registerButton:hover{
+    height: 25px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 10px;
+    font-size: 20px;
+
+    color:black;
+    background: white;
+}
+
+.invisible{
+    display: none;
+}
+
+.visible{
+    display: initial;
+}
+
+@media screen and (max-width: 700px) and (orientation: portrait)
+{
+    .loginBox{
+        width: 90vw;
+        height: 70vh;
+        max-height: 350px;
+    }
+
+
+    #loginHeader{
+        padding-bottom: 20px;
+        padding-top: 0;
+        font-size: 45px;
+    }
+
+    .loginBox label{
+        font-size: 23px;
+    }
+
+    .loginBox input{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+
+    .loginBox input[type="text"],.loginBox input[type="password"] {
+        font-size: 25px;
+        height: 30px;
+    }
+
+    .loginBox input[type="submit"] {
+        width: 100%;
+        height: 35px;
+        bottom: 10px;
+        font-size: 30px;
+    }
+
+    .loginBox input[type="submit"]:hover
+    {
+        height: 35px;
+        font-size: 30px;
+    }
+
+    #registerButton{
+        height:35px;
+        width: 100%;
+    }
+    .registerBox{
+        width: 90vw;
+        height: 80vh;
+        max-height: 400px;
+    }
+
+
+    #registerHeader{
+        padding-bottom: 15px;
+        padding-top: 0;
+        font-size: 40px;
+    }
+
+    .registerBox label{
+        font-size: 18px;
+    }
+
+    .registerBox input{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+
+    .registerBox input[type="text"],.registerBox input[type="password"] {
+        font-size: 20px;
+        height: 25px;
+    }
+
+    .registerBox input[type="submit"] {
+        height: 35px;
+        bottom: 10px;
+        font-size: 30px;
+    }
+
+    .registerBox input[type="submit"]:hover
+    {
+        height: 35px;
+        font-size: 30px;
+    }
+
+}
+
+
+@media screen and (max-height: 500px) and (orientation: landscape)
+{
+    .loginBox{
+        width: 70vw;
+        height: 90vh;
+        max-height: 300px;
+    }
+
+
+    #loginHeader{
+        padding-bottom: 15px;
+        padding-top: 0;
+        font-size: 35px;
+    }
+
+    .loginBox label{
+        font-size: 18px;
+    }
+
+    .loginBox input{
+        margin-bottom: 35px;
+    }
+
+
+    .loginBox input[type="text"],.loginBox input[type="password"] {
+        font-size: 20px;
+        height: 25px;
+    }
+
+    .loginBox input[type="submit"] {
+        height: 30px;
+        bottom: 10px;
+        font-size: 25px;
+    }
+
+    .loginBox input[type="submit"]:hover
+    {
+        height: 30px;
+        font-size: 25px;
+    }
+
+    .registerBox{
+        width: 70vw;
+        height: 90vh;
+        max-height: 350px;
+    }
+
+
+    #registerHeader{
+        padding-bottom: 15px;
+        padding-top: 0;
+        font-size: 25px;
+    }
+
+    .registerBox label{
+        font-size: 18px;
+    }
+
+    .registerBox input{
+        margin-bottom: 25px;
+    }
+
+
+    .registerBox input[type="text"],.registerBox input[type="password"] {
+        font-size: 20px;
+        height: 25px;
+    }
+
+    .registerBox input[type="submit"] {
+        height: 30px;
+        bottom: 10px;
+        font-size: 25px;
+    }
+
+    .registerBox input[type="submit"]:hover
+    {
+        height: 30px;
+        font-size: 25px;
+    }
 }
