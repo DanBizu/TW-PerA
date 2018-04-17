@@ -26,7 +26,7 @@ body {
 #sidebar{
 	background: transparent;
 	top: 0px;
-  	z-index:1;
+  	z-index: 1;
 	width: 200px;
 	height: 100%;
 	display: block;
@@ -52,7 +52,6 @@ li.sidebar-el a{
 	color: #ccc;
 	text-decoration: none;
   	background:rgba(0,0,0,0.6);
-	/*border-bottom:2px solid #111;*/
 	border-left: 5px solid lightblue;
 	display: block;
 	width: 100%;
@@ -66,16 +65,15 @@ li.sidebar-el a{
 li.sidebar-el a:hover {
 	background: rgba(166, 98, 44, 0.6);
 	color: white;
-
 }
 
-#active {
+#current-page {
 	background: #b56b2b;
 }
 
 
 #sidebar-button {
-	color : #b56b1b;
+	color : black;
 	width: 20px;
 	height: 15px;
  	font-size: 25px;
@@ -92,37 +90,53 @@ li.sidebar-el a:hover {
 }
 
 main{
-	width: 80%;
-	left: 230px;
-	top: 5%;
+	width: 85%;
+	left: 200px;
+	height: 98%;
+	top: 1%;
 	position: absolute;
 }
 
-main h1{
+h1{
 	color: green;
+	position: absolute;
+	left: 50px;
+	top: 0px;
+	height: 50px;
+	display: block;
+
 }
 
 main table{
-	background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+	background: rgba(0,0,0,0.6);
 	display: inline-block;
 	color: white;
 	border-collapse: collapse;
+	position: absolute;
+	left: 50px;
+	top: 60px;
 }
 
-main table td{
-	cursor: pointer;
-}
 
-main table.FriendsTable th{
+#header-row{
 	border-bottom: 1px solid black;
+}
+
+table td{
+	cursor: pointer;
 }
 
 .Friend {
     cursor: pointer;
+    padding: 4px;
 }
 
 .active, .Friend:hover {
     background-color: #ccc;
+}
+
+.Friend:active {
+	background-color: #ccc;
 }
 
 td img{
@@ -132,43 +146,60 @@ td img{
 	max-width: 50px;
 }
 
-#toBeExpanded{
-	display: none;
-	float: right;
+.RemoveFriend{
+	padding: 3px;
 }
 
-.tableContainer {
-  border: 1px solid black;
-  width: 80%;
-  margin-top: 0px;
-  margin-right:10px;
-  max-height: 86vh;
-  display: inline-block;
-  padding: 10px;
-  background: linear-gradient(to right,black,transparent,black);
+tfoot{
+	border-collapse: collapse;
+}
+
+#add-friend-btn {
+	color: rgba(0,0,0,0.6);
+	width: 100%;
+	padding: 3px;
+}
+
+#modalActivities{
+	display: none;
+}
+
+.tableContainer{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+	background: rgba(0, 0, 0, 0.5);
 }
 
 .tableContainer #scrollTab{
-  max-width: 100%;
-  overflow-x: hidden;
-  max-height: 80vh;
-  overflow-y: scroll;
+  	position: relative;
+	width: 94%;
+	height: 90%;
+	max-height: 80vh;
+	top: 5%;
+	bottom: 5%;
+	left: 3%;
+	right: 3%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background: rgba(0, 0, 0, 0.7)
 }
 
 .activityContainerButton{
-  background: none;
+  	width: 100%;
+	height: 20%;
 }
 
 .activityContainer{
-    border: 1px solid black;
-    margin: 1px;
     color: white;
-    padding-left: 5px;
     width: 100%;
-    padding:5px;
+    height: 100%;
+    position: relative;
     text-align: left;
-    margin-top: 3px;
-    background: linear-gradient(to right,rgba(0,0,0,0.2),transparent,black);
+    top: 0px;
+	left: 0px;
+	border-bottom: 1px solid black;
 }
 
 .activityName{
@@ -186,18 +217,74 @@ td img{
 }
 
 
-#modalClose{
-  float: right;
-  font-size: 25px;
-  color: white;
-  padding: 5px;
+.closeBtn{
+	color: white;
+	font-size: 20px;
+	float: right;
+	position: fixed;
+	top: 0px;
+	right: 7px;
 }
 
-#modalClose:hover{
-  color:red;
-  text-decoration: none;
-  cursor: pointer;
+.closeBtn:hover, .closeBtn:focus {
+    text-decoration: none;
+    cursor: pointer;
+    color: red;
 }
+
+#modalAddFriend{
+	display: none;
+}
+
+.modalAddFriend{
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	position: fixed;
+	z-index: 2;
+}
+
+
+.contentAddFriend{
+	display: block;
+	float: left;
+	width: 94%;
+	height: 80%;
+	position: fixed;
+	top: 10%;
+	bottom: 10%;
+	left: 3%;
+	right: 3%;
+	background: #fefefe;
+}
+
+.pop-up-header{
+	color: green;
+	font-size: 30px;
+	padding-left: 20px;
+}
+
+.searchTab{
+	display: inline-block;
+	width: 50%;
+	height: 100%;
+	border-right: 2px solid black;
+}
+
+#searchInput{
+	position: relative;
+	top: 10%;
+	left: 20%;
+}
+
+.suggestionsTab{
+	display: inline-block;
+	float: right;
+	width: 50%;
+	height: 100%;
+}
+
+
 /*Removed orientation*/
 @media screen and (max-width: 767px) and (orientation: portrait){
 

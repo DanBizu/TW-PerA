@@ -1,30 +1,34 @@
-var acc = document.getElementsByClassName("Friend");
-var table = document.getElementById("toBeExpanded");
+var openActivities = document.getElementsByClassName("Friend");
+var closeActivities = document.getElementById("modalActivitiesClose");
 var i;
-var closeBtn = document.getElementById("modalClose");
+var modalActivities = document.getElementById("modalActivities");
 
-
-
-for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function(){
-    	if(table.style.display === "none"){
-    		table.style.display = "block";
-    		this.className = "active";
-    	} else {
-    		table.style.display = "none";
-    		this.className = "";
-    	}
+for(i = 0; i < openActivities.length; i++){
+    openActivities[i].onclick = function(){
+        modalActivities.style.display = "block";     
     }
 }
 
-closeBtn.onclick = function(){
-	table.style.display = "none";
+closeActivities.onclick = function(){
+    modalActivities.style.display = "none";
 }
 
 
+var openAdd = document.getElementById("add-friend-btn");
+var modalAdd = document.getElementById("modalAddFriend");
+var closeAdd = document.getElementById("modalAddClose");
+
+openAdd.onclick = function() {
+    modalAdd.style.display = "block";
+}
+
+closeAdd.onclick = function() {
+    modalAdd.style.display = "none";
+}
+
 function ExpandSidebar(){
-	var button = document.getElementById("sidebar-button");
-	var sidebar = document.getElementById("sidebar");
-	button.classList.toggle('invisible');
-	sidebar.classList.toggle('visible');
+    var button = document.getElementById("sidebar-button");
+    var sidebar = document.getElementById("sidebar");
+    button.classList.toggle('invisible');
+    sidebar.classList.toggle('visible');
 }

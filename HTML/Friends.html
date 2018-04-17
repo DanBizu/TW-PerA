@@ -1,115 +1,170 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Friends </title>
-		<meta charset="UTF-8">
-	<link rel="stylesheet" href="../CSS/Friends.css">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title> Friends </title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../CSS/Friends.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
 
-	<div id="sidebar">
+  <div class="tableContainer" id="modalActivities">
+    <span class="closeBtn" id="modalActivitiesClose">&times;</span>
+    <div id="scrollTab">
 
-				<ul>
-					<li class="sidebar-el"><a href="Home.html">Home</a></li>
-					<li class="sidebar-el"><a href="Friends.html" id="active">Friends</a></li>
-					<li class="sidebar-el"><a href="Contact.html">About us</a></li>
-					<li class="sidebar-el"><a href="login.html" >Logout</a></li>
-				</ul>
+    <div class="activityContainerButton">
+      <table class="activityContainer">
+        <tr>
+          <th rowspan="2" class="activityName"> Tenis </th>
+          <td class="activityHour">17.00-19.00</td>
+        </tr>
+        <tr>
+          <td class="activityDate">23/06/2019</td>
+        </tr>
+      </table>
+    </div>
 
-		<i class="fa fa-bars" id="sidebar-button" onclick="ExpandSidebar()"></i>
+    <div class="activityContainerButton">
+      <table class="activityContainer">
+        <tr>
+          <th rowspan="2"  class="activityName">Fotbal </th>
+          <td class="activityHour">17.00-19.00</td>
+        </tr>
+        <tr>
+          <td class="activityDate">23/06/2019</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="activityContainerButton">
+      <table class="activityContainer">
+        <tr>
+          <th rowspan="2"  class="activityName">Hochei </th>
+          <td class="activityHour">17.00-19.00</td>
+        </tr>
+        <tr>
+          <td class="activityDate">23/06/2019</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="activityContainerButton">
+      <table class="activityContainer">
+        <tr>
+          <th rowspan="2" class="activityName">Baseball </th>
+          <td class="activityHour">17.00-19.00</td>
+        </tr>
+        <tr>
+          <td class="activityDate">23/06/2019</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="activityContainerButton">
+      <table class="activityContainer">
+        <tr>
+          <th rowspan="2" class="activityName">Curling </th>
+          <td class="activityHour">17.00-19.00</td>
+        </tr>
+        <tr>
+          <td class="activityDate">23/06/2019</td>
+        </tr>
+      </table>
+    </div>
+
+    </div> <!-- scrollTab -->
+
+  </div> <!-- tableContainer -->
+
+  <div class="modalAddFriend" id="modalAddFriend">
+    <span class="closeBtn" id="modalAddClose">&times;</span>
+    <div class="contentAddFriend">
+      <div class="searchTab">
+      	<h3 class="pop-up-header">Search for a person</h3>
+        <input id="searchInput" type="text" name="Search" placeholder="Search">
+      </div>
+      <div class="suggestionsTab">
+      	<h3 class="pop-up-header">Suggestions</h3>
+        <table>
+        	<thead>
+        		<tr>
+        			<th>Nume</th>
+        			<th>Cunoscuti comuni</th>
+        		</tr>
+        	</thead>
+        	<tbody>
+        		<tr>
+        			<td>Nae Catavencu</td>
+        			<td>2</td>
+        		</tr>
+        		<tr>
+        			<td>Zaharia Trahanache</td>
+        			<td>2</td>
+        		</tr>
+        		<tr>
+        			<td>Zoe Trahanache</td>
+        			<td>2</td>
+        		</tr>
+        		<tr>
+        			<td>Pristanda</td>
+        			<td>2</td>
+        		</tr>
+        	</tbody>
+        </table>
+      </div>
+
+    </div> <!-- contentAddFriend -->
 
 
-	</div>
+  </div>
 
-	<main>
-		<header>
-			<h1>Friends</h1>
-		</header>
-		<table class="FriendsTable">
-			<tr>
-				<th>Profile</th>
-				<th>Name</th>
-			</tr>
-			<tr class="Friend">
-				<td><img src="../Images/Profile.png" class="profilePics" alt="Profile"></td>
-				<td>Popovici Popa</td>
-			</tr>
-			<tr class="Friend">
-				<td><img src="../Images/Profile1.jpg" class="profilePics" alt="Profile"></td>
-				<td>Ionescu Ion</td>
-			</tr>
-		</table>
+  <div id="sidebar">
+    <ul>
+      <li class="sidebar-el"><a href="Home.html">Home</a></li>
+      <li class="sidebar-el"><a href="Friends.html" id="current-page">Friends</a></li>
+      <li class="sidebar-el"><a href="Contact.html">About us</a></li>
+      <li class="sidebar-el"><a href="login.html" >Logout</a></li>
+    </ul>
 
-		<div class="tableContainer" id="toBeExpanded">
-			<span id="modalClose">&times;</span>
-			<div id="scrollTab">
+    <i class="fa fa-bars" id="sidebar-button" onclick="ExpandSidebar()"></i>
+  </div>
 
-				<div class="activityContainerButton">
-					<table class="activityContainer">
-						<tr>
-							<th rowspan="2" class="activityName"> Tenis </th>
-							<td class="activityHour">17.00-19.00</td>
-						</tr>
-						<tr>
-							<td class="activityDate">23/06/2019</td>
-						</tr>
-					</table>
-				</div>
+  <main>
+    <header>
+      <h1>Friends</h1>
+    </header>
 
-				<div class="activityContainerButton">
-					<table class="activityContainer">
-						<tr>
-							<th rowspan="2"  class="activityName">Fotbal </th>
-							<td class="activityHour">17.00-19.00</td>
-						</tr>
-						<tr>
-							<td class="activityDate">23/06/2019</td>
-						</tr>
-					</table>
-				</div>
-
-				<div class="activityContainerButton">
-					<table class="activityContainer">
-						<tr>
-							<th rowspan="2"  class="activityName">Hochei </th>
-							<td class="activityHour">17.00-19.00</td>
-						</tr>
-							<tr>
-								<td class="activityDate">23/06/2019</td>
-							</tr>
-					</table>
-				</div>
-
-				<div class="activityContainerButton">
-					<table class="activityContainer">
-						<tr>
-							<th rowspan="2" class="activityName">Baseball </th>
-							<td class="activityHour">17.00-19.00</td>
-						</tr>
-						<tr>
-							<td class="activityDate">23/06/2019</td>
-						</tr>
-					</table>
-				</div>
-
-				<div class="activityContainerButton">
-					<table class="activityContainer">
-						<tr>
-							<th rowspan="2" class="activityName">Curling </th>
-							<td class="activityHour">17.00-19.00</td>
-						</tr>
-						<tr>
-							<td class="activityDate">23/06/2019</td>
-						</tr>
-					</table>
-				</div>
-
-			</div>
-
-		</div>
-	</main>
-	<script src="../JS/Friends.js"></script>
+    <table class="FriendsTable">
+      <tr id="header-row">
+        <th>Profile</th>
+        <th>Name</th>
+      </tr>
+      <tr>
+        <td><img src="../Images/Profile.png" class="profilePics" alt="Profile"></td>
+        <td class="Friend">Popovici Popa</td>
+        <td><span class="RemoveFriend">&times;</span></td>
+      </tr>
+      <tr>
+        <td><img src="../Images/Profile1.jpg" class="profilePics" alt="Profile"></td>
+        <td class="Friend">Ionescu Ion</td>
+        <td><span class="RemoveFriend">&times;</span></td>
+      </tr>
+      <tr>
+        <td><img src="../Images/Profile1.jpg" class="profilePics" alt="Profile"></td>
+        <td class="Friend">Casperoconovici Sperietenescu</td>
+        <td><span class="RemoveFriend">&times;</span></td>
+      </tr>
+      <tfoot>
+        <tr>
+          <td colspan="3"><button class="fa fa-plus-square-o" id="add-friend-btn"></button></td>
+        </tr>
+      </tfoot>
+      
+    </table>
+  </main>
+  
+  <script src="../JS/Friends.js"></script>
 </body>
 </html>
