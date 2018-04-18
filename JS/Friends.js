@@ -5,8 +5,15 @@ var modalActivities = document.getElementById("modalActivities");
 
 for(i = 0; i < openActivities.length; i++){
     openActivities[i].onclick = function(){
-        modalActivities.style.display = "block";     
+        modalActivities.style.display = "block";
+
+        window.onclick = function(event){
+            if(event.target == modalActivities){
+                modalActivities.style.display = "none";
+            }
+        }
     }
+
 }
 
 closeActivities.onclick = function(){
@@ -20,11 +27,19 @@ var closeAdd = document.getElementById("modalAddClose");
 
 openAdd.onclick = function() {
     modalAdd.style.display = "block";
+
+    window.onclick = function(event){
+        if(event.target == modalAdd){
+            modalAdd.style.display = "none";
+        }
+    }
 }
 
 closeAdd.onclick = function() {
     modalAdd.style.display = "none";
 }
+
+
 
 function ExpandSidebar(){
     var button = document.getElementById("sidebar-button");

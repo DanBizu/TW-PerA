@@ -24,15 +24,14 @@ body {
 }
 
 #sidebar{
-	background: transparent;
-	top: 0px;
+	background: transparent;	
   	z-index: 1;
 	width: 200px;
 	height: 100%;
 	display: block;
 	position: fixed;
 	left:-205px;
-	top:0px;
+	top: 0px;
 	transition:left 0.2s linear;
 }
 
@@ -73,7 +72,7 @@ li.sidebar-el a:hover {
 
 
 #sidebar-button {
-	color : black;
+	color : green;
 	width: 20px;
 	height: 15px;
  	font-size: 25px;
@@ -274,7 +273,7 @@ tfoot{
 #searchInput{
 	position: relative;
 	top: 10%;
-	left: 20%;
+	left: 5%;
 }
 
 .suggestionsTab{
@@ -285,306 +284,342 @@ tfoot{
 }
 
 
-/*Removed orientation*/
-@media screen and (max-width: 767px) and (orientation: portrait){
-
-	#sidebar{
-		width: 100%;
-		height: 47px;
-		margin: 0px;
-		left: 0px;
-		margin-top: 0px;
-		position: fixed;
-		display: block;
-		transition: none;
-		background: rgba(0,0,0,0.6);
-		z-index: 1;
-	}
-
-	#sidebar ul{
-		margin: 0;
-		padding: 0;
-	}
-
-	li.sidebar-el{
-		float: left;
-		top: 0px;
-		left: 0px;
-		margin: 0px;
-	}
-
-	li.sidebar-el a{
-		font-size: 18px;
-		color: #ccc;
-		text-decoration: none;
-  		background:rgba(0,0,0,0);
-		border-left: 0px transparent;
-		display: block;
-		width: 100%;
-		text-align: center;
-		padding-left: 5px;
-	}
-
-	li.sidebar-el:nth-child(4){
-		float: right;
-	}
-
-	#sidebar-button{
-		display: none;
-	}
-
-	.invisible{
-		display: none;
-	}
-
-	main{
-		width: 90%;
-		margin-left: 2%;
-		margin-right: 2%;
-		left: 0px;
-	}
-
-	@keyframes modalAnimation {
-  		0% {opacity: 0;}
-  		100% {opacity: 1;}
-	}
-
-	.tableContainer {
-    	width: 100%;
-    	word-wrap: break-word;
-    	animation-name: modalAnimation;
-    	animation-duration: 0.5s;
-    	background:rgba(0,0,0,0.9);
-    	color: white;
-    	margin:5% auto;
-  		max-height: 600px;
-  		overflow:auto;
-  		box-shadow: 0 5px 6px 0 rgba(0,0,0,0.2);
-  		z-index: -1;
-  		position: relative;
-  	}
-
-  	.tableContainer #scrollTab{
-      max-width: 100%;
-      overflow-x: hidden;
-      max-height: 80vh;
-      overflow-y: scroll;
-    }
-
-    .activityName{
-    	font-size: 15px;
-    	width: 90%;
-  	}
-
-  	.activityHour , .activityDate{
-    	width: 100%;
-    	font-size: 15px;
-   	 	font-weight: bold;
-    	display: flex;
-    	justify-content: flex-end;
-    	text-align: left;
-  	}
-
+.suggestionsTab table{
+	width: 94%;
+	margin-left: 3%;
+	margin-right: 3%;
 }
 
-@media screen and (min-width: 533px) and (max-width: 580px) and (orientation: landscape){
+.common-friends{
+	text-align: center;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait){
 	#sidebar{
+		position: fixed;
+		top: 0px;
 		left: 0px;
-		margin: 0px;
-		width: 120px;
+  		z-index: 1;
+		width: 100%;
+		height: 50px;
 	}
 
 	#sidebar ul{
+		position: relative;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 50px;
 		margin: 0px;
 		padding: 0px;
 	}
 
-	#sidebar-button{
+	li.sidebar-el{
+		display: inline-block;
+		float: left;
+		width: 25vw;
+		text-align: center;
+	}
+
+	li.sidebar-el a{
+		font-size: 12px;
+		color: #ccc;
+		text-decoration: none;
+	  	background:rgba(0,0,0,0.6);
+		height: 50px;
+		padding-top: 15px;
+		padding-left: 10px;
+		text-align: center;
+		margin: 0px;
+		border: 0px;
+	}
+
+	.sidebar-el:visited {
+		color: white;
+	}
+
+	li.sidebar-el a:hover {
+		background: rgba(166, 98, 44, 0.6);
+		color: white;
+	}
+
+	#current-page {
+		background: #b56b2b;
+	}
+
+
+	#sidebar-button {
+		color : black;
+		width: 0px;
+		height: 0px;
+ 		font-size: 0px;
+		cursor: pointer;
+		margin: 0px;
+		position: absolute;
+		top: 0px;
+		right: 0px;
 		display: none;
 	}
 
-	.invisible{
-		display: none;
+
+	#sidebar-button.invisible {
+	  	right: 0px;
+	  	display: none;
 	}
+
+
+
+	.tableContainer #scrollTab{
+	  	position: relative;
+		width: 93%;
+		height: 90%;
+		max-height: 80vh;
+		top: 12vh;
+		bottom: 8vh;
+		left: 3.5%;
+		right: 3.5%;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		background: rgba(0, 0, 0, 0.7)
+	}
+
 
 	main{
-		max-width: 70vw;
-		left: 120px;
-		margin-left: 2%;
-		top:0px;
-		margin-right: 5%;
+		width: 100%;
+		left: 0px;
+		top: 50px;
+		height: 90vh;
+		position: absolute;
 	}
 
-	main h1{
-		font-size: 25px;
+	h1{
+		color: green;
+		position: absolute;
+		left: 20px;
+		top: 0px;
+		height: 50px;
+		display: block;
 	}
 
-	main table th{
-		font-size: 12px;
+	main table{
+		background: rgba(0,0,0,0.6);
+		display: block;
+		color: white;
+		border-collapse: collapse;
+		position: absolute;
+		left: 10px;
+		right: auto;
+		top: 70px;
+		font-size: 13px;
 	}
 
-	td img{
-		height: auto;
-		width: auto;
-		max-height: 60px;
-		max-width: 40px;
-	}
-
-	main table td{
-		font-size: 12px;
+	table td{
 		cursor: pointer;
 	}
 
-	main table.FriendsTable th{
-		border-bottom: 1px solid black;
+
+	.contentAddFriend{
+		display: block;
+		float: left;
+		width: 94%;
+		height: 90%;
+		position: fixed;
+		top: 5%;
+		bottom: 5%;
+		left: 3%;
+		right: 3%;
+		background: #fefefe;
 	}
 
-	@keyframes modalAnimation {
-  		0% {opacity: 0;}
-  		100% {opacity: 1;}
+	.pop-up-header{
+		color: green;
+		font-size: 25px;
+		padding-left: 20px;
 	}
 
-	.tableContainer {
-		width: 55%;
-		margin-right: 15px;
-		margin-top: 0px;
-    	word-wrap: break-word;
-    	animation-name: modalAnimation;
-    	animation-duration: 0.3s;
-    	background:rgba(0,0,0,0.9);
-    	color: white;
-  		max-height: 568px;
-  		overflow:auto;
-  		box-shadow: 0 5px 6px 0 rgba(0,0,0,0.2);
-  		z-index: -1;
-  		position: relative;
-  	}
+	.searchTab{
+		display: block;
+		width: 100%;
+		height: 40%;
+		border-right: 0px;
+		border-bottom: 2px solid black;
+	}
 
-  	.tableContainer #scrollTab{
-      max-width: 100%;
-      overflow-x: hidden;
-      max-height: 80vh;
-      overflow-y: scroll;
-    }
+	#searchInput{
+		position: relative;
+		top: 10%;
+		left: 20%;
+	}
 
-    .activityName{
-    	font-size: 15px;
-    	width: 90%;
-  	}
-
-  	.activityHour , .activityDate{
-    	width: 100%;
-    	font-size: 13px;
-   	 	font-weight: bold;
-    	display: flex;
-    	justify-content: flex-end;
-    	text-align: left;
-  	}
-
-  	#modalClose{
-  		float: right;
-  		font-size: 15px;
-  		color: white;
-  		padding: 2px;
+	.suggestionsTab{
+		display: block;
+		width: 100%;
+		height: 60%;
 	}
 }
 
 
-@media screen and (min-width: 581px) and (max-width: 959px) and (orientation: landscape){
+@media screen and (min-width: 520px) and (max-width: 767px) and (orientation: landscape){
 	#sidebar{
+		position: fixed;
+		top: 0px;
 		left: 0px;
-		margin: 0px;
-		width: 120px;
+  		z-index: 1;
+		width: 100%;
+		height: 50px;
 	}
 
 	#sidebar ul{
-		margin: 0;
-		padding: 0;
+		position: relative;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 50px;
+		margin: 0px;
+		padding: 0px;
 	}
 
 	li.sidebar-el{
-		height: 25%;
+		display: inline-block;
+		float: left;
+		width: 25vw;
+		text-align: center;
 	}
 
-	#sidebar-button{
+	li.sidebar-el a{
+		font-size: 12px;
+		color: #ccc;
+		text-decoration: none;
+	  	background:rgba(0,0,0,0.6);
+		height: 50px;
+		padding-top: 15px;
+		padding-left: 10px;
+		text-align: center;
+		margin: 0px;
+		border: 0px;
+	}
+
+	.sidebar-el:visited {
+		color: white;
+	}
+
+	li.sidebar-el a:hover {
+		background: rgba(166, 98, 44, 0.6);
+		color: white;
+	}
+
+	#current-page {
+		background: #b56b2b;
+	}
+
+
+	#sidebar-button {
+		color : black;
+		width: 0px;
+		height: 0px;
+ 		font-size: 0px;
+		cursor: pointer;
+		margin: 0px;
+		position: absolute;
+		top: 0px;
+		right: 0px;
 		display: none;
 	}
 
-	.invisible{
-		display: none;
+
+	#sidebar-button.invisible {
+	  	right: 0px;
+	  	display: none;
 	}
+
+
+
+	.tableContainer #scrollTab{
+	  	position: relative;
+		width: 93%;
+		height: 90%;
+		max-height: 80vh;
+		top: 12vh;
+		bottom: 8vh;
+		left: 3.5%;
+		right: 3.5%;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		background: rgba(0, 0, 0, 0.7)
+	}
+
 
 	main{
-		max-width: 90vw;
-		left: 120px;
-		margin-left: 2%;
-		top:0px;
-		margin-right: 5%;
+		width: 100%;
+		left: 0px;
+		top: 50px;
+		height: 85vh;
+		position: absolute;
+		overflow-y: hidden;
 	}
 
-	main h1{
-		font-size: 25px;
+	h1{
+		color: green;
+		position: absolute;
+		left: 20px;
+		top: 0px;
+		height: 50px;
+		display: block;
 	}
 
-	main table th{
-		font-size: 12px;
+	main table{
+		background: rgba(0,0,0,0.6);
+		display: block;
+		color: white;
+		border-collapse: collapse;
+		position: absolute;
+		left: 10px;
+		right: auto;
+		top: 70px;
+		font-size: 13px;
 	}
 
-	td img{
-		height: auto;
-		width: auto;
-		max-height: 60px;
-		max-width: 40px;
-	}
-
-	main table td{
-		font-size: 12px;
+	table td{
 		cursor: pointer;
 	}
 
-	main table.FriendsTable th{
-		border-bottom: 1px solid black;
+
+	.contentAddFriend{
+		display: block;
+		float: left;
+		width: 90%;
+		height: 90%;
+		position: fixed;
+		top: 5%;
+		bottom: 5%;
+		left: 5%;
+		right: 5%;
+		background: #fefefe;
 	}
 
-	@keyframes modalAnimation {
-  		0% {opacity: 0;}
-  		100% {opacity: 1;}
+	.pop-up-header{
+		color: green;
+		font-size: 25px;
+		padding-left: 20px;
 	}
 
-	.tableContainer {
-		width: 70%;
-		margin-right: 15px;
-		margin-top: 0px;
-    	word-wrap: break-word;
-    	animation-name: modalAnimation;
-    	animation-duration: 0.3s;
-    	background:rgba(0,0,0,0.9);
-    	color: white;
-  		max-height: 568px;
-  		overflow:auto;
-  		box-shadow: 0 5px 6px 0 rgba(0,0,0,0.2);
-  		z-index: -1;
-  		position: relative;
-  	}
+	.searchTab{
+		display:inline-block;
+		width: 50%;
+		height: 100%;
+		border-right: 2px solid black;
+	}
 
-  	.tableContainer #scrollTab{
-      max-width: 100%;
-      overflow-x: hidden;
-      max-height: 80vh;
-      overflow-y: scroll;
-    }
+	#searchInput{
+		position: absolute;
+		top: 60px;
+		left: 20px;
+	}
 
-    .activityName{
-    	font-size: 15px;
-    	width: 90%;
-  	}
-
-  	.activityHour , .activityDate{
-    	width: 100%;
-    	font-size: 15px;
-   	 	font-weight: bold;
-    	display: flex;
-    	justify-content: flex-end;
-    	text-align: left;
-  	}
+	.suggestionsTab{
+		display: inline-block;
+		width: 50%;
+		height: 100%;
+	}
 }
