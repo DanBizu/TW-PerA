@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title> Friends </title>
   <meta charset="UTF-8">
@@ -14,69 +15,71 @@
     <span class="closeBtn" id="modalActivitiesClose">&times;</span>
     <div id="scrollTab">
 
-    <div class="activityContainerButton">
-      <table class="activityContainer">
-        <tr>
-          <th rowspan="2" class="activityName"> Tenis </th>
-          <td class="activityHour">17.00-19.00</td>
-        </tr>
-        <tr>
-          <td class="activityDate">23/06/2019</td>
-        </tr>
-      </table>
+      <div class="activityContainerButton">
+        <table class="activityContainer">
+          <tr>
+            <th rowspan="2" class="activityName"> Tenis </th>
+            <td class="activityHour">17.00-19.00</td>
+          </tr>
+          <tr>
+            <td class="activityDate">23/06/2019</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="activityContainerButton">
+        <table class="activityContainer">
+          <tr>
+            <th rowspan="2" class="activityName">Fotbal </th>
+            <td class="activityHour">17.00-19.00</td>
+          </tr>
+          <tr>
+            <td class="activityDate">23/06/2019</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="activityContainerButton">
+        <table class="activityContainer">
+          <tr>
+            <th rowspan="2" class="activityName">Hochei </th>
+            <td class="activityHour">17.00-19.00</td>
+          </tr>
+          <tr>
+            <td class="activityDate">23/06/2019</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="activityContainerButton">
+        <table class="activityContainer">
+          <tr>
+            <th rowspan="2" class="activityName">Baseball </th>
+            <td class="activityHour">17.00-19.00</td>
+          </tr>
+          <tr>
+            <td class="activityDate">23/06/2019</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="activityContainerButton">
+        <table class="activityContainer">
+          <tr>
+            <th rowspan="2" class="activityName">Curling </th>
+            <td class="activityHour">17.00-19.00</td>
+          </tr>
+          <tr>
+            <td class="activityDate">23/06/2019</td>
+          </tr>
+        </table>
+      </div>
+
     </div>
+    <!-- scrollTab -->
 
-    <div class="activityContainerButton">
-      <table class="activityContainer">
-        <tr>
-          <th rowspan="2"  class="activityName">Fotbal </th>
-          <td class="activityHour">17.00-19.00</td>
-        </tr>
-        <tr>
-          <td class="activityDate">23/06/2019</td>
-        </tr>
-      </table>
-    </div>
-
-    <div class="activityContainerButton">
-      <table class="activityContainer">
-        <tr>
-          <th rowspan="2"  class="activityName">Hochei </th>
-          <td class="activityHour">17.00-19.00</td>
-        </tr>
-        <tr>
-          <td class="activityDate">23/06/2019</td>
-        </tr>
-      </table>
-    </div>
-
-    <div class="activityContainerButton">
-      <table class="activityContainer">
-        <tr>
-          <th rowspan="2" class="activityName">Baseball </th>
-          <td class="activityHour">17.00-19.00</td>
-        </tr>
-        <tr>
-          <td class="activityDate">23/06/2019</td>
-        </tr>
-      </table>
-    </div>
-
-    <div class="activityContainerButton">
-      <table class="activityContainer">
-        <tr>
-          <th rowspan="2" class="activityName">Curling </th>
-          <td class="activityHour">17.00-19.00</td>
-        </tr>
-        <tr>
-          <td class="activityDate">23/06/2019</td>
-        </tr>
-      </table>
-    </div>
-
-    </div> <!-- scrollTab -->
-
-  </div> <!-- tableContainer -->
+  </div>
+  <!-- tableContainer -->
 
   <div class="modalAddFriend" id="modalAddFriend">
     <span class="closeBtn" id="modalAddClose">&times;</span>
@@ -115,17 +118,34 @@
         </table>
       </div>
 
-    </div> <!-- contentAddFriend -->
+    </div>
+    <!-- contentAddFriend -->
 
 
   </div>
 
   <div id="sidebar">
     <ul>
-      <li class="sidebar-el"><a href="Home.html"><b>Home</b></a></li>
-      <li class="sidebar-el"><a href="Friends.html" id="current-page"><b>Friends</b></a></li>
-      <li class="sidebar-el"><a href="Contact.html"><b>About us</b></a></li>
-      <li class="sidebar-el"><a href="login.html"><b>Logout</b></a></li>
+      <li class="sidebar-el">
+        <a href="Home.html">
+          <b>Home</b>
+        </a>
+      </li>
+      <li class="sidebar-el">
+        <a href="Friends.html" id="current-page">
+          <b>Friends</b>
+        </a>
+      </li>
+      <li class="sidebar-el">
+        <a href="Contact.html">
+          <b>About us</b>
+        </a>
+      </li>
+      <li class="sidebar-el">
+        <a href="login.html">
+          <b>Logout</b>
+        </a>
+      </li>
     </ul>
 
     <i class="fa fa-bars" id="sidebar-button" onclick="ExpandSidebar()"></i>
@@ -142,29 +162,44 @@
         <th>Name</th>
       </tr>
       <tr>
-        <td><img src="../Images/Profile.png" class="profilePics" alt="Profile"></td>
+        <td>
+          <img src="../Images/Profile.png" class="profilePics" alt="Profile">
+        </td>
         <td class="Friend">Popovici Popa</td>
-        <td><span class="RemoveFriend">&times;</span></td>
+        <td>
+          <span class="RemoveFriend">&times;</span>
+        </td>
       </tr>
       <tr>
-        <td><img src="../Images/Profile1.jpg" class="profilePics" alt="Profile"></td>
+        <td>
+          <img src="../Images/Profile1.jpg" class="profilePics" alt="Profile">
+        </td>
         <td class="Friend">Ionescu Ion</td>
-        <td><span class="RemoveFriend">&times;</span></td>
+        <td>
+          <span class="RemoveFriend">&times;</span>
+        </td>
       </tr>
       <tr>
-        <td><img src="../Images/Profile1.jpg" class="profilePics" alt="Profile"></td>
+        <td>
+          <img src="../Images/Profile1.jpg" class="profilePics" alt="Profile">
+        </td>
         <td class="Friend">Casperoconovici Sperietenescu</td>
-        <td><span class="RemoveFriend">&times;</span></td>
+        <td>
+          <span class="RemoveFriend">&times;</span>
+        </td>
       </tr>
       <tfoot>
         <tr>
-          <td colspan="3"><button class="fa fa-plus-square-o" id="add-friend-btn"></button></td>
+          <td colspan="3">
+            <button class="fa fa-plus-square-o" id="add-friend-btn"></button>
+          </td>
         </tr>
       </tfoot>
-      
+
     </table>
   </main>
-  
+
   <script src="../JS/Friends.js"></script>
 </body>
+
 </html>

@@ -1,63 +1,63 @@
 html {
-      background: url('../Images/login.jpg') no-repeat center center fixed;
-      background-size: cover;
-      font-family: sans-serif;
+  background: url('../Images/login.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: sans-serif;
 }
 
 body {
-	margin: 0px;
-	padding: 0px;
-	font-family:"Helvetica Neue", Helvetica, Arial;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Helvetica Neue", Helvetica, Arial;
 }
-
-
 
 .tableContainer {
   border: 1px solid black;
   width: 70%;
   margin-top: 30px;
-  margin-right:10px;
+  margin-right: 10px;
   max-height: 86vh;
-  float:right;
+  float: right;
   padding: 10px;
-  background: linear-gradient(to right,black,transparent,black);
+  background: linear-gradient(to right, black, transparent, black);
 }
 
-.tableContainer #scrollTab{
+.tableContainer #scrollTab {
   max-width: 100%;
   overflow-x: hidden;
   max-height: 80vh;
   overflow-y: scroll;
 }
 
-
-.activityContainerButton{
+.activityContainerButton {
   background: none;
 }
-#timeRepeat{
+
+#timeRepeat {
   background: transparent;
-  border:none;
-  color:white;
-  float:right;
-}
-.activityContainer{
-    border: 1px solid black;
-    margin: 1px;
-    color: white;
-    padding-left: 5px;
-    width: 100%;
-    padding:5px;
-    text-align: left;
-    margin-top: 3px;
-    background: linear-gradient(to right,rgba(0,0,0,0.2),transparent,black);
+  border: none;
+  color: white;
+  float: right;
 }
 
-.activityName{
+.activityContainer {
+  border: 1px solid black;
+  margin: 1px;
+  color: white;
+  padding-left: 5px;
+  width: 100%;
+  padding: 5px;
+  text-align: left;
+  margin-top: 3px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), transparent, black);
+}
+
+.activityName {
   font-size: 25px;
   width: 90%;
 }
 
-.activityHour , .activityDate{
+.activityHour,
+.activityDate {
   width: 100%;
   font-size: 17px;
   font-weight: bold;
@@ -66,78 +66,80 @@ body {
   text-align: left;
 }
 
-.deleteButton{
+.deleteButton {
   font-size: 30px;
   width: 30px;
   padding-left: 15px;
 }
 
-.deleteButton:hover{
+.deleteButton:hover {
   font-size: 30px;
   width: 30px;
   color: red;
   padding-left: 15px;
 }
 
-
-.modalEdit{
+.modalEdit {
   display: none;
   position: fixed;
   z-index: 1;
   left: 0;
-  top:0;
+  top: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
 }
 
-.modalContent{
+.modalContent {
   margin: 5px;
-  background:rgba(0,0,0,0.9);
+  background: rgba(0, 0, 0, 0.9);
   color: white;
-  margin:5% auto;
+  margin: 5% auto;
   padding: 50px;
   width: 50%;
   max-height: 600px;
-  overflow:auto;
-  box-shadow: 0 5px 6px 0 rgba(0,0,0,0.2);
+  overflow: auto;
+  box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.2);
   animation-name: modalAnimation;
   animation-duration: 0.5s;
 }
 
-.modalClose{
+.modalClose {
   float: right;
   font-size: 20px;
   color: white;
   padding: 5px;
 }
 
-.modalClose:hover{
-  color:red;
+.modalClose:hover {
+  color: red;
   text-decoration: none;
   cursor: pointer;
-
 }
 
 @keyframes modalAnimation {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 ::-webkit-scrollbar {
-    width: 1px;
+  width: 1px;
 }
 
 ::-webkit-scrollbar-track {
-    border-radius: 1px;
+  border-radius: 1px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: gray;
-    border-radius: 10px;
+  background: gray;
+  border-radius: 10px;
 }
 
-#addButton{
+#addButton {
   font-size: 25px;
   background: none;
   color: white;
@@ -145,64 +147,59 @@ body {
   border: 0;
 }
 
-
-#sidebar{
-	background: transparent;
-	top: 0px;
-	width: 200px;
-	height: 100%;
-	display: block;
-	position: fixed;
-	left:-205px;
-	top:0px;
-	transition:left 0.2s linear;
+#sidebar {
+  background: transparent;
+  top: 0px;
+  width: 200px;
+  height: 100%;
+  display: block;
+  position: fixed;
+  left: -205px;
+  top: 0px;
+  transition: left 0.2s linear;
 }
 
-#sidebar.visible{
-	left:0px;
-	transition:left 0.2s linear;
+#sidebar.visible {
+  left: 0px;
+  transition: left 0.2s linear;
 }
-
 
 ul.sidebar {
-	margin: 0px;
-	padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
-li.sidebar-el{
-	list-style: none;
+li.sidebar-el {
+  list-style: none;
 }
 
-li.sidebar-el a{
-
-	font-size: 18px;
-	color: #ccc;
-	text-decoration: none;
-	background:rgba(0,0,0,0.6);
-	border-left: 5px solid lightblue;
-	display: block;
-	width: 165px;
-	padding:10px 10px 10px 15px;
+li.sidebar-el a {
+  font-size: 18px;
+  color: #ccc;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.6);
+  border-left: 5px solid lightblue;
+  display: block;
+  width: 165px;
+  padding: 10px 10px 10px 15px;
 }
 
 .sidebar-el:visited {
-	color: white;
+  color: white;
 }
 
 li.sidebar-el a:hover {
   background: rgba(166, 98, 44, 0.6);
   color: white;
-
 }
 
 #active {
   background: #b56b2b;
 }
 
-
 #sidebar-button {
   display: inline-block;
-  color : #b56b1b;
+  color: #b56b1b;
   width: 20px;
   height: 15px;
   font-size: 25px;
@@ -213,81 +210,68 @@ li.sidebar-el a:hover {
   right: -60px;
 }
 
-
 #sidebar-button.invisible {
   right: 150px;
 }
 
-
-@media screen and  (orientation: landscape) and (max-height: 450px){
-
+@media screen and (orientation: landscape) and (max-height: 450px) {
   .tableContainer {
     width: 70vw;
     max-height: 93vh;
-    margin-top:5px;
-    background: linear-gradient(to right,black,transparent,black);
+    margin-top: 5px;
+    background: linear-gradient(to right, black, transparent, black);
   }
-
- .tableContainer #scrollTab{
+  .tableContainer #scrollTab {
     max-width: 100%;
     overflow-x: hidden;
     max-height: 80vh;
     overflow-y: scroll;
   }
-  .activityName{
+  .activityName {
     font-size: 15px;
     width: 90%;
-
   }
-
-  .activityHour , .activityDate{
+  .activityHour,
+  .activityDate {
     font-size: 10px;
   }
-
-
-  .deleteButton{
+  .deleteButton {
     font-size: 20px;
     padding-left: 13px;
   }
-
-  .deleteButton:hover{
+  .deleteButton:hover {
     font-size: 30px;
     color: white;
     padding-left: 5px;
   }
-
-  .modalContent{
+  .modalContent {
     width: 100%;
     word-wrap: break-word;
     animation-name: modalAnimation;
     animation-duration: 0.5s;
   }
-
 }
 
-@media screen and (orientation: portrait) and (max-width: 600px){
-
+@media screen and (orientation: portrait) and (max-width: 600px) {
   .tableContainer {
     width: 95%;
-    margin-top:10vh;
+    margin-top: 10vh;
     max-height: 90vh;
     margin: 0;
-    background: linear-gradient(to right,black,transparent,black);
+    background: linear-gradient(to right, black, transparent, black);
   }
-
-   .tableContainer #scrollTab{
-      max-width: 100%;
-      overflow-x: hidden;
-      max-height: 80vh;
-      overflow-y: scroll;
-    }
-
-  .activityName{
+  .tableContainer #scrollTab {
+    max-width: 100%;
+    overflow-x: hidden;
+    max-height: 80vh;
+    overflow-y: scroll;
+  }
+  .activityName {
     font-size: 15px;
     width: 90%;
   }
-
-  .activityHour , .activityDate{
+  .activityHour,
+  .activityDate {
     width: 100%;
     font-size: 17px;
     font-weight: bold;
@@ -295,29 +279,25 @@ li.sidebar-el a:hover {
     justify-content: flex-end;
     text-align: left;
   }
-
-  .deleteButton{
+  .deleteButton {
     font-size: 20px;
     padding-left: 13px;
   }
-
-  .deleteButton:hover{
+  .deleteButton:hover {
     font-size: 30px;
     color: white;
     padding-left: 5px;
   }
-
-  .modalContent{
+  .modalContent {
     width: 100%;
     word-wrap: break-word;
     animation-name: modalAnimation;
     animation-duration: 0.5s;
   }
-
 }
 
-@media screen and (max-width: 767px) and (orientation: portrait){
-  #sidebar{
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  #sidebar {
     width: 100%;
     height: 47px;
     margin: 0px;
@@ -326,44 +306,39 @@ li.sidebar-el a:hover {
     position: fixed;
     display: block;
     transition: none;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
   }
-  #sidebar ul{
+  #sidebar ul {
     margin: 0;
     padding: 0;
   }
-
-  li.sidebar-el{
+  li.sidebar-el {
     float: left;
     top: 0px;
     left: 0px;
     margin: 0px;
   }
-
-  li.sidebar-el a{
+  li.sidebar-el a {
     font-size: 18px;
     color: #ccc;
     text-decoration: none;
-      background:rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0);
     border-left: 0px transparent;
     display: block;
     width: 100%;
     text-align: center;
     padding-left: 5px;
   }
-
-  li.sidebar-el:nth-child(4){
+  li.sidebar-el:nth-child(4) {
     float: right;
   }
-  #sidebar-button{
+  #sidebar-button {
     display: none;
   }
-
-  .invisible{
+  .invisible {
     display: none;
   }
-
-  main{
+  main {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
@@ -371,31 +346,26 @@ li.sidebar-el a:hover {
   }
 }
 
-@media screen and (max-width: 959px) and (orientation: landscape){
-  #sidebar{
+@media screen and (max-width: 959px) and (orientation: landscape) {
+  #sidebar {
     left: 0px;
     margin: 0px;
     width: 120px;
   }
-
-  #sidebar ul{
+  #sidebar ul {
     margin: 0;
     padding: 0;
   }
-
-  li.sidebar-el{
+  li.sidebar-el {
     height: 25%;
   }
-
-  #sidebar-button{
+  #sidebar-button {
     display: none;
   }
-
-  .invisible{
+  .invisible {
     display: none;
   }
-
-  main{
+  main {
     left: 120px;
     margin-left: 3%;
   }

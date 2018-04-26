@@ -1,6 +1,6 @@
 html {
-      background: url('../Images/login.jpg') no-repeat center center fixed;
-      background-size: cover;
+	background: url('../Images/login.jpg') no-repeat center center fixed;
+	background-size: cover;
 }
 
 body {
@@ -9,52 +9,52 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 2px;
+	width: 2px;
 }
 
 /* Track */
+
 ::-webkit-scrollbar-track {
-    border-radius: 1px;
+	border-radius: 1px;
 }
 
 /* Handle */
+
 ::-webkit-scrollbar-thumb {
-    background: gray;
-    border-radius: 10px;
+	background: gray;
+	border-radius: 10px;
 }
 
-#sidebar{
-	background: transparent;	
-  	z-index: 1;
+#sidebar {
+	background: transparent;
+	z-index: 1;
 	width: 200px;
 	height: 100%;
 	display: block;
 	position: fixed;
-	left:-205px;
+	left: -205px;
 	top: 0px;
-	transition:left 0.2s linear;
+	transition: left 0.2s linear;
 }
 
-#sidebar.visible{
-	left:0px;
-	transition:left 0.2s ease-in;
+#sidebar.visible {
+	left: 0px;
+	transition: left 0.2s ease-in;
 }
 
-
-li.sidebar-el{
+li.sidebar-el {
 	list-style: none;
 }
 
-li.sidebar-el a{
-
+li.sidebar-el a {
 	font-size: 18px;
 	color: #ccc;
 	text-decoration: none;
-  	background:rgba(0,0,0,0.6);
+	background: rgba(0, 0, 0, 0.6);
 	border-left: 5px solid lightblue;
 	display: block;
 	width: 100%;
-	padding:10px 10px 10px 15px;
+	padding: 10px 10px 10px 15px;
 }
 
 .sidebar-el:visited {
@@ -70,12 +70,11 @@ li.sidebar-el a:hover {
 	background: #b56b2b;
 }
 
-
 #sidebar-button {
-	color : green;
+	color: green;
 	width: 20px;
 	height: 15px;
- 	font-size: 25px;
+	font-size: 25px;
 	cursor: pointer;
 	margin: 15px;
 	position: absolute;
@@ -83,12 +82,11 @@ li.sidebar-el a:hover {
 	right: -60px;
 }
 
-
 #sidebar-button.invisible {
-  right: 150px;
+	right: 150px;
 }
 
-main{
+main {
 	width: 85%;
 	left: 200px;
 	height: 98%;
@@ -96,18 +94,17 @@ main{
 	position: absolute;
 }
 
-h1{
+h1 {
 	color: green;
 	position: absolute;
 	left: 50px;
 	top: 0px;
 	height: 50px;
 	display: block;
-
 }
 
-main table{
-	background: rgba(0,0,0,0.6);
+main table {
+	background: rgba(0, 0, 0, 0.6);
 	display: inline-block;
 	color: white;
 	border-collapse: collapse;
@@ -116,54 +113,54 @@ main table{
 	top: 60px;
 }
 
-
-#header-row{
+#header-row {
 	border-bottom: 1px solid black;
 }
 
-table td{
+table td {
 	cursor: pointer;
 }
 
 .Friend {
-    cursor: pointer;
-    padding: 4px;
+	cursor: pointer;
+	padding: 4px;
 }
 
-.active, .Friend:hover {
-    background-color: #ccc;
+.active,
+.Friend:hover {
+	background-color: #ccc;
 }
 
 .Friend:active {
 	background-color: #ccc;
 }
 
-td img{
+td img {
 	height: auto;
 	width: auto;
 	max-height: 80px;
 	max-width: 50px;
 }
 
-.RemoveFriend{
+.RemoveFriend {
 	padding: 3px;
 }
 
-tfoot{
+tfoot {
 	border-collapse: collapse;
 }
 
 #add-friend-btn {
-	color: rgba(0,0,0,0.6);
+	color: rgba(0, 0, 0, 0.6);
 	width: 100%;
 	padding: 3px;
 }
 
-#modalActivities{
+#modalActivities {
 	display: none;
 }
 
-.tableContainer{
+.tableContainer {
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -171,8 +168,8 @@ tfoot{
 	background: rgba(0, 0, 0, 0.5);
 }
 
-.tableContainer #scrollTab{
-  	position: relative;
+.tableContainer #scrollTab {
+	position: relative;
 	width: 94%;
 	height: 90%;
 	max-height: 80vh;
@@ -185,38 +182,38 @@ tfoot{
 	background: rgba(0, 0, 0, 0.7)
 }
 
-.activityContainerButton{
-  	width: 100%;
+.activityContainerButton {
+	width: 100%;
 	height: 20%;
 }
 
-.activityContainer{
-    color: white;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    text-align: left;
-    top: 0px;
+.activityContainer {
+	color: white;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	text-align: left;
+	top: 0px;
 	left: 0px;
 	border-bottom: 1px solid black;
 }
 
-.activityName{
-  font-size: 25px;
-  width: 90%;
+.activityName {
+	font-size: 25px;
+	width: 90%;
 }
 
-.activityHour , .activityDate{
-  width: 100%;
-  font-size: 17px;
-  font-weight: bold;
-  display: flex;
-  justify-content: flex-end;
-  text-align: left;
+.activityHour,
+.activityDate {
+	width: 100%;
+	font-size: 17px;
+	font-weight: bold;
+	display: flex;
+	justify-content: flex-end;
+	text-align: left;
 }
 
-
-.closeBtn{
+.closeBtn {
 	color: white;
 	font-size: 20px;
 	float: right;
@@ -225,17 +222,18 @@ tfoot{
 	right: 7px;
 }
 
-.closeBtn:hover, .closeBtn:focus {
-    text-decoration: none;
-    cursor: pointer;
-    color: red;
+.closeBtn:hover,
+.closeBtn:focus {
+	text-decoration: none;
+	cursor: pointer;
+	color: red;
 }
 
-#modalAddFriend{
+#modalAddFriend {
 	display: none;
 }
 
-.modalAddFriend{
+.modalAddFriend {
 	width: 100%;
 	height: 100%;
 	background: rgba(0, 0, 0, 0.6);
@@ -243,8 +241,7 @@ tfoot{
 	z-index: 2;
 }
 
-
-.contentAddFriend{
+.contentAddFriend {
 	display: block;
 	float: left;
 	width: 94%;
@@ -257,55 +254,52 @@ tfoot{
 	background: #fefefe;
 }
 
-.pop-up-header{
+.pop-up-header {
 	color: green;
 	font-size: 30px;
 	padding-left: 20px;
 }
 
-.searchTab{
+.searchTab {
 	display: inline-block;
 	width: 50%;
 	height: 100%;
 	border-right: 2px solid black;
 }
 
-#searchInput{
+#searchInput {
 	position: relative;
 	top: 10%;
 	left: 5%;
 }
 
-.suggestionsTab{
+.suggestionsTab {
 	display: inline-block;
 	float: right;
 	width: 50%;
 	height: 100%;
 }
 
-
-.suggestionsTab table{
+.suggestionsTab table {
 	width: 94%;
 	margin-left: 3%;
 	margin-right: 3%;
 }
 
-.common-friends{
+.common-friends {
 	text-align: center;
 }
 
-
-@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait){
-	#sidebar{
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+	#sidebar {
 		position: fixed;
 		top: 0px;
 		left: 0px;
-  		z-index: 1;
+		z-index: 1;
 		width: 100%;
 		height: 50px;
 	}
-
-	#sidebar ul{
+	#sidebar ul {
 		position: relative;
 		top: 0px;
 		left: 0px;
@@ -314,19 +308,17 @@ tfoot{
 		margin: 0px;
 		padding: 0px;
 	}
-
-	li.sidebar-el{
+	li.sidebar-el {
 		display: inline-block;
 		float: left;
 		width: 25vw;
 		text-align: center;
 	}
-
-	li.sidebar-el a{
+	li.sidebar-el a {
 		font-size: 12px;
 		color: #ccc;
 		text-decoration: none;
-	  	background:rgba(0,0,0,0.6);
+		background: rgba(0, 0, 0, 0.6);
 		height: 50px;
 		padding-top: 15px;
 		padding-left: 10px;
@@ -334,26 +326,21 @@ tfoot{
 		margin: 0px;
 		border: 0px;
 	}
-
 	.sidebar-el:visited {
 		color: white;
 	}
-
 	li.sidebar-el a:hover {
 		background: rgba(166, 98, 44, 0.6);
 		color: white;
 	}
-
 	#current-page {
 		background: #b56b2b;
 	}
-
-
 	#sidebar-button {
-		color : black;
+		color: black;
 		width: 0px;
 		height: 0px;
- 		font-size: 0px;
+		font-size: 0px;
 		cursor: pointer;
 		margin: 0px;
 		position: absolute;
@@ -361,17 +348,12 @@ tfoot{
 		right: 0px;
 		display: none;
 	}
-
-
 	#sidebar-button.invisible {
-	  	right: 0px;
-	  	display: none;
+		right: 0px;
+		display: none;
 	}
-
-
-
-	.tableContainer #scrollTab{
-	  	position: relative;
+	.tableContainer #scrollTab {
+		position: relative;
 		width: 93%;
 		height: 90%;
 		max-height: 80vh;
@@ -383,17 +365,14 @@ tfoot{
 		overflow-y: scroll;
 		background: rgba(0, 0, 0, 0.7)
 	}
-
-
-	main{
+	main {
 		width: 100%;
 		left: 0px;
 		top: 50px;
 		height: 90vh;
 		position: absolute;
 	}
-
-	h1{
+	h1 {
 		color: green;
 		position: absolute;
 		left: 20px;
@@ -401,9 +380,8 @@ tfoot{
 		height: 50px;
 		display: block;
 	}
-
-	main table{
-		background: rgba(0,0,0,0.6);
+	main table {
+		background: rgba(0, 0, 0, 0.6);
 		display: block;
 		color: white;
 		border-collapse: collapse;
@@ -413,13 +391,10 @@ tfoot{
 		top: 70px;
 		font-size: 13px;
 	}
-
-	table td{
+	table td {
 		cursor: pointer;
 	}
-
-
-	.contentAddFriend{
+	.contentAddFriend {
 		display: block;
 		float: left;
 		width: 94%;
@@ -431,46 +406,40 @@ tfoot{
 		right: 3%;
 		background: #fefefe;
 	}
-
-	.pop-up-header{
+	.pop-up-header {
 		color: green;
 		font-size: 25px;
 		padding-left: 20px;
 	}
-
-	.searchTab{
+	.searchTab {
 		display: block;
 		width: 100%;
 		height: 40%;
 		border-right: 0px;
 		border-bottom: 2px solid black;
 	}
-
-	#searchInput{
+	#searchInput {
 		position: relative;
 		top: 10%;
 		left: 20%;
 	}
-
-	.suggestionsTab{
+	.suggestionsTab {
 		display: block;
 		width: 100%;
 		height: 60%;
 	}
 }
 
-
-@media screen and (min-width: 520px) and (max-width: 767px) and (orientation: landscape){
-	#sidebar{
+@media screen and (min-width: 520px) and (max-width: 767px) and (orientation: landscape) {
+	#sidebar {
 		position: fixed;
 		top: 0px;
 		left: 0px;
-  		z-index: 1;
+		z-index: 1;
 		width: 100%;
 		height: 50px;
 	}
-
-	#sidebar ul{
+	#sidebar ul {
 		position: relative;
 		top: 0px;
 		left: 0px;
@@ -479,19 +448,17 @@ tfoot{
 		margin: 0px;
 		padding: 0px;
 	}
-
-	li.sidebar-el{
+	li.sidebar-el {
 		display: inline-block;
 		float: left;
 		width: 25vw;
 		text-align: center;
 	}
-
-	li.sidebar-el a{
+	li.sidebar-el a {
 		font-size: 12px;
 		color: #ccc;
 		text-decoration: none;
-	  	background:rgba(0,0,0,0.6);
+		background: rgba(0, 0, 0, 0.6);
 		height: 50px;
 		padding-top: 15px;
 		padding-left: 10px;
@@ -499,26 +466,21 @@ tfoot{
 		margin: 0px;
 		border: 0px;
 	}
-
 	.sidebar-el:visited {
 		color: white;
 	}
-
 	li.sidebar-el a:hover {
 		background: rgba(166, 98, 44, 0.6);
 		color: white;
 	}
-
 	#current-page {
 		background: #b56b2b;
 	}
-
-
 	#sidebar-button {
-		color : black;
+		color: black;
 		width: 0px;
 		height: 0px;
- 		font-size: 0px;
+		font-size: 0px;
 		cursor: pointer;
 		margin: 0px;
 		position: absolute;
@@ -526,17 +488,12 @@ tfoot{
 		right: 0px;
 		display: none;
 	}
-
-
 	#sidebar-button.invisible {
-	  	right: 0px;
-	  	display: none;
+		right: 0px;
+		display: none;
 	}
-
-
-
-	.tableContainer #scrollTab{
-	  	position: relative;
+	.tableContainer #scrollTab {
+		position: relative;
 		width: 93%;
 		height: 90%;
 		max-height: 80vh;
@@ -548,9 +505,7 @@ tfoot{
 		overflow-y: scroll;
 		background: rgba(0, 0, 0, 0.7)
 	}
-
-
-	main{
+	main {
 		width: 100%;
 		left: 0px;
 		top: 50px;
@@ -558,8 +513,7 @@ tfoot{
 		position: absolute;
 		overflow-y: hidden;
 	}
-
-	h1{
+	h1 {
 		color: green;
 		position: absolute;
 		left: 20px;
@@ -567,9 +521,8 @@ tfoot{
 		height: 50px;
 		display: block;
 	}
-
-	main table{
-		background: rgba(0,0,0,0.6);
+	main table {
+		background: rgba(0, 0, 0, 0.6);
 		display: block;
 		color: white;
 		border-collapse: collapse;
@@ -579,13 +532,10 @@ tfoot{
 		top: 70px;
 		font-size: 13px;
 	}
-
-	table td{
+	table td {
 		cursor: pointer;
 	}
-
-
-	.contentAddFriend{
+	.contentAddFriend {
 		display: block;
 		float: left;
 		width: 90%;
@@ -597,27 +547,23 @@ tfoot{
 		right: 5%;
 		background: #fefefe;
 	}
-
-	.pop-up-header{
+	.pop-up-header {
 		color: green;
 		font-size: 25px;
 		padding-left: 20px;
 	}
-
-	.searchTab{
-		display:inline-block;
+	.searchTab {
+		display: inline-block;
 		width: 50%;
 		height: 100%;
 		border-right: 2px solid black;
 	}
-
-	#searchInput{
+	#searchInput {
 		position: absolute;
 		top: 60px;
 		left: 20px;
 	}
-
-	.suggestionsTab{
+	.suggestionsTab {
 		display: inline-block;
 		width: 50%;
 		height: 100%;
