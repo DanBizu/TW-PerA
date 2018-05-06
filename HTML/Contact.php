@@ -1,3 +1,11 @@
+<?php session_start();
+    if(empty($_SESSION['username']))
+    {
+		header("Location: ./login.php?user=notloged");
+		exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -16,16 +24,16 @@
 
 		<ul>
 			<li class="sidebar-el">
-				<a href="Home.html">Home</a>
+				<a href="Home.php">Home</a>
 			</li>
 			<li class="sidebar-el">
 				<a href="Friends.html">Friends</a>
 			</li>
 			<li class="sidebar-el">
-				<a href="Contact.html" id="active">About us</a>
+				<a href="Contact.php" id="active">About us</a>
 			</li>
 			<li class="sidebar-el">
-				<a href="login.html">Logout</a>
+				<a href="../PHP/logout.lib.php">Logout</a>
 			</li>
 		</ul>
 

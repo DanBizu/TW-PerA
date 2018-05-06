@@ -1,3 +1,10 @@
+<?php session_start();
+    if(empty($_SESSION['username']))
+    {
+		header("Location: ./login.php?user=notloged");
+		exit();
+    }
+?>
 <!DOCTYPE html>
 <html>
 
@@ -17,7 +24,7 @@
 
 		<ul>
 			<li class="sidebar-el">
-				<a href="Home.html" id="active">Home</a>
+				<a href="Home.php" id="active"> Home </a>
 			</li>
 			<li class="sidebar-el">
 				<a href="Friends.html">Friends</a>
@@ -26,7 +33,7 @@
 				<a href="Contact.html">About us</a>
 			</li>
 			<li class="sidebar-el">
-				<a href="login.html">Logout</a>
+				<a href="../PHP/logout.lib.php">Logout</a>
 			</li>
 		</ul>
 		<i class="fa fa-bars" id="sidebar-button" onclick="ExpandSidebar()"></i>
@@ -57,7 +64,7 @@
 					<option value="">14:00</option>
 					<option value="">16:00</option>
 				</select>
-				<br> How Often -
+				<br> How Often :
 				<select class="" name="repeat">
 					<option value="">Daily</option>
 					<option value="">Weekly</option>
@@ -82,7 +89,6 @@
 				<br>
 				<input type="submit" name="submit" value="Submit">
 			</form>
-
 		</div>
 	</div>
 
@@ -122,7 +128,7 @@
 			<option value="">Tuesday</option>
 			<option value="">Wednesday</option>
 			<option value="">Thursday</option>
-			<option value="">1Friday</option>
+			<option value="">Friday</option>
 		</select>
 		<br>
 
@@ -131,7 +137,7 @@
 			<div class="activityContainerButton" id="activityContainerButton1">
 				<table class="activityContainer" id="activityContainer1">
 					<tr>
-						<th rowspan="2" class="activityName" data-modal="modalEdit1"> Tenis </th>
+						<th rowspan="2" class="activityName" data-modal="modalEdit1"> Ceva  </th>
 						<td class="activityHour">17.00-19.00</td>
 						<th rowspan="2" class="deleteButton">
 							<i class="fa fa-trash" onclick="removeElement('activityContainerButton1')"></i>

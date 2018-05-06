@@ -1,3 +1,6 @@
+<?php session_start();
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -12,10 +15,18 @@
 
 <body>
 
+    <?php
+    if (isset($_GET['user'])) {
+        echo "<script type='text/javascript'>alert('Please log in first');</script>";
+        }
+        elseif (isset($_GET['username'])) {
+            echo "<script type='text/javascript'>alert('Username already taken try again');</script>";
+            }
+    ?>
 
     <div class='loginBox' id="loginBox">
         <h1 id='loginHeader'>Login</h1>
-        <form action="./Home.html" method="post">
+        <form method="post" method="POST" action="../PHP/login.lib.php">
             <div>
                 <label for="User">Username</label>
                 <input type="text" id="User" name="username" placeholder="User" required>
@@ -39,7 +50,7 @@
 
     <div class='registerBox' id="registerBox">
         <h1 id='registerHeader'>Register</h1>
-        <form method="post">
+        <form method="post" method="POST" action="../PHP/register.lib.php">
             <div>
                 <label for="registerUser">Username</label>
                 <input type="text" id="registerUser" name="registerUser" placeholder="User" required>

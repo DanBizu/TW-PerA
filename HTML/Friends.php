@@ -1,3 +1,10 @@
+<?php session_start();
+    if(empty($_SESSION['username']))
+    {
+		header("Location: ./login.php?user=notloged");
+		exit();
+    }
+?>
 <!DOCTYPE html>
 <html>
 
@@ -142,8 +149,7 @@
         </a>
       </li>
       <li class="sidebar-el">
-        <a href="login.html">
-          <b>Logout</b>
+          <a href="../PHP/logout.lib.php">Logout</a>
         </a>
       </li>
     </ul>
