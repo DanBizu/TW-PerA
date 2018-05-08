@@ -1,0 +1,20 @@
+1. USER
+	a) ID;
+	b) Username;
+	c) pass..;
+
+2. Friends
+	a) ID_user_1;
+	b) ID_user_2;
+
+3. Activities 
+	a) activity_ID;
+	b) activity_name;
+	c) visibilitate;
+	d) periodicitate;
+	e) timp;
+	f) tip activitate;
+
+4. Tabel care face legatura intre utilizator si activitate ?
+	a) ID_user;
+	b) ID_activitate;
