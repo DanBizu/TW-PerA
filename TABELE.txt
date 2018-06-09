@@ -1,20 +1,25 @@
 1. USER
-	a) ID;
-	b) Username;
-	c) pass..;
+	a) id int(11)
+	b) username  varchar(256)
+	c) password	varchar(256)
+	d) email varchar(256)
 
 2. Friends
 	a) ID_user_1;
 	b) ID_user_2;
 
 3. Activities 
-	a) activity_ID;
-	b) activity_name;
-	c) visibilitate;
-	d) periodicitate;
-	e) timp;
-	f) tip activitate;
+	a) id int(11)
+	b) name varchar(256)
+	c) type	varchar(256)
+	d) date date
+	e) location	varchar(256)
+	f) start time
+	g) duration	int(4)
+	h) repetition varchar(10)
+	i) privacy	varchar(7)
 
-4. Tabel care face legatura intre utilizator si activitate ?
-	a) ID_user;
-	b) ID_activitate;
+4. engages Tabel care face legatura intre utilizator si activitate 
+	a) 	user_id	int(11)	
+	b) 	activity_id	int(11)	
+

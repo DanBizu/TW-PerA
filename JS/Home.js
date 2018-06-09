@@ -1,6 +1,23 @@
 var modalBtn = document.getElementsByClassName('activityName');
 
 var closeBtn = document.getElementsByClassName('modalClose');
+
+windows.onload = function(){
+  var jRequest = new XMLHttpRequest();
+  
+  jRequest.open('GET' , userUsername , true);
+  
+  jRequest.onload=function() {
+    var activity = JSON.parse(jRequest.responseText);
+  
+    for( i =0 ; i< activity.length;i++){
+        addElement(activity[i]);
+    }
+  
+  };
+  jRequest.send();
+  }
+  
 /*
 var addButton = document.getElementById("addButton");
 
@@ -66,15 +83,15 @@ function removeElement(childDiv) {
 var number = 5;
 
 
-function addElement() {
+function addElement(data) {
   var aux = 'activityContainerButton' + number;
   var aux2 = "'" + aux + "'";
   var p = document.getElementById('scrollTab');
-  var newElement = document.createElement("DIV");
-  newElement.innerHTML = '<table class="activityContainer" , id="activityContainer' + number + ' " ><tr><th rowspan="2" , class="activityName" , data-modal="modalEdit1"> Tenis </th><td class="activityHour">17.00-19.00</td><th rowspan="2" , class="deleteButton"> <i class="fa fa-trash" , onclick="removeElement(' + aux2 + ')"></i></th>	</tr><tr><td class="activityDate">23/06/2019</td></tr> </table>'
+  var newElement = document.createElement("div");
+  newElement.innerHTML = '<table class="activityContainer" , id="activityContainer' + number + ' " ><tr><th rowspan="2" , class="activityName" , data-modal="modalEdit'+ number +'">'+ data.name + '</th><td class="activityHour">' + data.start
+  +'</td><th rowspan="2" , class="deleteButton"> <i class="fa fa-trash" , onclick="removeElement(' + aux2 + ')"></i></th>	</tr><tr><td class="activityDate">' + data.date + '</td></tr> </table>'
   newElement.setAttribute("class", "activityContainerButton")
-  newElement.setAttribute("id", aux)
-  newElement.innerHTML.color = "white";
+  newElement.setAttribute("id", aux);
   p.appendChild(newElement);
   number++;
 }
