@@ -8,14 +8,14 @@ function loading(){
     function createActivity(data) {
       var aux = 'activityContainerButton' + number;
       var aux2 = "'" + aux + "'";
-      var aux3 = '"'+'modalEdit'+ number  + '"' ; 
+      var aux3 = "'"+'modalEdit'+ number  + "'" ; 
+      var aux4= "onsubmit="+ '"' + "return confirm('Do you really want to delete this  activity ?');" + '"';
       var p = document.getElementById('scrollTab');
       var newElement = document.createElement("div");
       newElement.setAttribute("class", "activityContainerButton")
+      newElement.setAttribute("data-id", data.id );
       newElement.setAttribute("id", aux);
-      newElement.setAttribute("onclick", 'modify(' + aux3+ ')');
-      newElement.innerHTML = '<table class="activityContainer" , id="activityContainer' + number + ' " ><tr><th rowspan="2" , class="activityName" , data-modal="modalEdit'+ number +'">'+ data.name + '</th><td class="activityHour">' + data.start
-      +'</td><th rowspan="2" , class="deleteButton"  onclick="removeElement(' + aux2 + ')"> <i class="fa fa-trash" ></i></th>	</tr><tr><td class="activityDate">' + data.date + '</td></tr> </table>'
+      newElement.innerHTML = '<table class="activityContainer" , id="activityContainer' + number + ' " ><tr><th rowspan="2" class="activityName" onclick="modify('+aux3+')" data-modal="modalEdit'+ number +'">'+ data.name + '</th><td class="activityHour">' + data.start + '</td><th rowspan="2"  class="deleteButton"  ><form method="POST" class="something" action="../PHP/delete.lib.php" ' + aux4 + '> <input type="hidden"  name="activityId" value="'+data.id+'"> <button type="submit" class="fa fa-trash" name="deleteAct" ></button></th>	</tr><tr><td class="activityDate">' + data.date + '</td></tr> </table>'
       p.appendChild(newElement);
 
     }
@@ -81,6 +81,24 @@ window.onclick = function(event) {
 }
 
 function removeElement(childDiv) {
+<<<<<<< HEAD
+    var delete_confirmed=confirm("Are you sure you want to delete this file?");
+
+    if (delete_confirmed==true) {
+        if (document.getElementById(childDiv)) {
+            var child = document.getElementById(childDiv);
+            var parent = document.getElementById('scrollTab');
+            parent.removeChild(child);
+          } else {
+            alert("Child div has already been removed or does not exist.");
+            return false;
+          }
+    } else { 
+       // this one returns the user if he/she clicks no :)
+       document.location.href = './Home.php';
+    }
+
+=======
 
     if (document.getElementById(childDiv)) {
       var child = document.getElementById(childDiv);
@@ -90,4 +108,5 @@ function removeElement(childDiv) {
       alert("Child div has already been removed or does not exist.");
       return false;
     }
+>>>>>>> 24fb91c4724b9d33f515ee6b6c3a991f2f39ca89
 }

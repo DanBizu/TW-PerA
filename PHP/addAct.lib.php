@@ -4,10 +4,10 @@ if(isset($_POST['addActivity'])){
     session_start(); 
     include_once 'conn.php';
 
-    $activityName = mysqli_real_escape_string ($conn , $_POST['activityName']);
+    $activityName =  htmlspecialchars(mysqli_real_escape_string ($conn , $_POST['activityName']));
     $activityType = mysqli_real_escape_string ($conn , $_POST['activityType']);
     $activityDate = mysqli_real_escape_string ($conn , $_POST['activityDate']);
-    $activityLocation = mysqli_real_escape_string ($conn , $_POST['activityLocation']);
+    $activityLocation =  htmlspecialchars(mysqli_real_escape_string ($conn , $_POST['activityLocation']));
     $activityStart = mysqli_real_escape_string ($conn , $_POST['activityStart']);
     $activityDuration = mysqli_real_escape_string ($conn , $_POST['activityDuration']);
     $activityRepeat = mysqli_real_escape_string ($conn , $_POST['activityRepeat']);

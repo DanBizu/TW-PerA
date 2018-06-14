@@ -4,9 +4,9 @@ if(isset($_POST['Register'])){
 
     include_once 'conn.php';
 
-    $Username = mysqli_real_escape_string ($conn , $_POST['registerUser']);
+    $Username =  htmlspecialchars(mysqli_real_escape_string ($conn , $_POST['registerUser']));
     $Password = mysqli_real_escape_string ($conn , $_POST['registerPass']);
-    $Email = mysqli_real_escape_string ($conn , $_POST['registerEmail']);
+    $Email =  htmlspecialchars(mysqli_real_escape_string ($conn , $_POST['registerEmail']));
 
     $quary = "Select * from users where username='$Username'";
     $sql = mysqli_num_rows(mysqli_query($conn , $quary));
