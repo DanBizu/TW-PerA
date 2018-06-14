@@ -27,7 +27,7 @@
 				<a href="Home.php">Home</a>
 			</li>
 			<li class="sidebar-el">
-				<a href="Friends.html">Friends</a>
+				<a href="Friends.php">Friends</a>
 			</li>
 			<li class="sidebar-el">
 				<a href="Contact.php" id="active">About us</a>

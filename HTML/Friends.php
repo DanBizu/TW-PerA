@@ -3,6 +3,8 @@
     {
 		header("Location: ./login.php?user=notloged");
 		exit();
+    } else {
+      include '../PHP/loadFriendAct.php';
     }
 ?>
 <!DOCTYPE html>
@@ -14,15 +16,26 @@
   <link rel="stylesheet" href="../CSS/Friends.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript">
+    var currUser='<?php $currUser = $_SESSION['username'];
+    echo "../JSON/$currUser.txt"; ?>';
+  </script>
 </head>
 
-<body>
+<body onload="loadActivities();">
 
   <div class="tableContainer" id="modalActivities">
     <span class="closeBtn" id="modalActivitiesClose">&times;</span>
     <div id="scrollTab">
-
-      <div class="activityContainerButton">
+      <table id="activityTable">
+        <tr><td><b>Nume</b></td>
+            <td><b>Data</b></td>
+            <td><b>Locatia</b></td>
+            <td><b>Ora start</b></td>
+            <td><b>Durata</b></td>
+        </tr>
+      </table>
+      <!--<div class="activityContainerButton">
         <table class="activityContainer">
           <tr>
             <th rowspan="2" class="activityName"> Tenis </th>
@@ -80,11 +93,11 @@
             <td class="activityDate">23/06/2019</td>
           </tr>
         </table>
-      </div>
+      </div>-->
 
-    </div>
-    <!-- scrollTab -->
 
+    </div><!-- scrollTab -->
+    
   </div>
   <!-- tableContainer -->
 
@@ -134,17 +147,17 @@
   <div id="sidebar">
     <ul>
       <li class="sidebar-el">
-        <a href="Home.html">
+        <a href="Home.php">
           <b>Home</b>
         </a>
       </li>
       <li class="sidebar-el">
-        <a href="Friends.html" id="current-page">
+        <a href="Friends.php" id="current-page">
           <b>Friends</b>
         </a>
       </li>
       <li class="sidebar-el">
-        <a href="Contact.html">
+        <a href="Contact.php">
           <b>About us</b>
         </a>
       </li>
@@ -161,8 +174,52 @@
     <header>
       <h1>Friends</h1>
     </header>
+    <div class="FriendsTable">
+    	<?php
+    	include '../PHP/conn.php';
+		$user = $_SESSION['username'];
 
-    <table class="FriendsTable">
+		$query = "SELECT id FROM users WHERE username = '$user'";
+		$result = @mysqli_query($conn, $query);
+		$row = mysqli_fetch_assoc($result);
+		$user_id = $row["id"];
+		//echo $user_id;
+
+		//Afisare prieteni
+		$query = "SELECT ID_user2 FROM friends WHERE ID_user1 = '$user_id'";
+		$result = @mysqli_query($conn, $query);
+		if($result){
+			echo '<table><tr><td><b>Username</b></td></tr>';
+			$json_array = array();
+			while($row = mysqli_fetch_array($result)){
+				$id = $row['ID_user2'];
+
+				$getActQ = "SELECT username, name, date, location, start, duration FROM Activities a JOIN engage e ON e.activity_id = a.id AND e.user_id = $id  JOIN users u ON u.id = $id WHERE privacy LIKE 'Visible'";
+				$resAct = @mysqli_query($conn , $getActQ);
+				if($resAct){
+					
+					while($rowFA = mysqli_fetch_assoc($resAct)){
+						$json_array[]=$rowFA;
+					}
+				}
+
+				$query = "SELECT username FROM users WHERE id = '$id'";
+				$result1 = @mysqli_query($conn, $query);
+
+				if($result1) {	
+					while($row1 = mysqli_fetch_assoc($result1)){
+						echo '<tr><td class=Friend>' . $row1['username'] . "</td></tr>";
+					}
+				}
+			}
+			$file = fopen("../JSON/$user.txt", "w") OR DIE("Unable to open the file.");
+			fwrite($file, json_encode($json_array));
+			fclose($file);
+			echo '</table>';
+		}
+    	?>
+    </div>
+    <!--<table class="FriendsTable">
       <tr id="header-row">
         <th>Profile</th>
         <th>Name</th>
@@ -203,6 +260,8 @@
       </tfoot>
 
     </table>
+    -->
+
   </main>
 
   <script src="../JS/Friends.js"></script>
