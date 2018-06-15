@@ -23,16 +23,16 @@
 
 		<ul>
 			<li class="sidebar-el">
-				<a href="Home.php">Home</a>
+				<a href="Home.php"><b>Home</b></a>
 			</li>
 			<li class="sidebar-el">
-				<a href="Friends.html">Friends</a>
+				<a href="Friends.html"><b>Friends</b></a>
 			</li>
 			<li class="sidebar-el">
-				<a href="Contact.php" id="active">About us</a>
+				<a href="Contact.php" id="active"><b>About us</b></a>
 			</li>
 			<li class="sidebar-el">
-				<a href="../PHP/logout.lib.php">Logout</a>
+				<a href="../PHP/logout.lib.php"><b>Logout</b></a>
 			</li>
 		</ul>
 

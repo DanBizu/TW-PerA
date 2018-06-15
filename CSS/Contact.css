@@ -85,7 +85,7 @@ body {
 }
 
 #sidebar {
-  background: transparent;
+  /*background: transparent;
   top: 0px;
   width: 200px;
   height: 100%;
@@ -93,7 +93,17 @@ body {
   position: fixed;
   left: -205px;
   top: 0px;
-  transition: left 0.2s linear;
+  transition: left 0.2s linear;*/
+
+  background: transparent;
+	z-index: 1;
+	width: 200px;
+	height: 100%;
+	display: block;
+	position: fixed;
+	left: -205px;
+	top: 0px;
+	transition: left 0.2s linear;
 }
 
 #sidebar.visible {
@@ -101,10 +111,10 @@ body {
   transition: left 0.2s ease-in;
 }
 
-ul.sidebar {
+/*ul.sidebar {
   margin: 0px;
   padding: 0px;
-}
+}*/
 
 li.sidebar-el {
   list-style: none;
@@ -136,7 +146,17 @@ li.sidebar-el a:hover {
 }
 
 #sidebar-button {
-  display: inline-block;
+  
+  color: green;
+	width: 20px;
+	height: 15px;
+	font-size: 25px;
+	cursor: pointer;
+	margin: 15px;
+	position: absolute;
+	top: 0px;
+	right: -60px;
+  /*display: inline-block;
   color: #b56b1b;
   width: 20px;
   height: 15px;
@@ -145,7 +165,7 @@ li.sidebar-el a:hover {
   margin: 15px;
   position: absolute;
   top: 0px;
-  right: -60px;
+  right: -60px;*/
 }
 
 #sidebar-button.invisible {

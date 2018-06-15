@@ -28,16 +28,16 @@
 	<div id="sidebar">
 		<ul>
 			<li class="sidebar-el">
-				<a href="Home.php" id="active"> Home </a>
+				<a href="Home.php" id="active"><b>Home</b></a>
 			</li>
 			<li class="sidebar-el">
-				<a href="Friends.php">Friends</a>
+				<a href="Friends.php"><b>Friends</b></a>
 			</li>
 			<li class="sidebar-el">
-				<a href="Contact.php">About us</a>
+				<a href="Contact.php"><b>About us</b></a>
 			</li>
 			<li class="sidebar-el">
-				<a href="../PHP/logout.lib.php">Logout</a>
+				<a href="../PHP/logout.lib.php"><b>Logout</b></a>
 			</li>
 		</ul>
 		<i class="fa fa-bars" id="sidebar-button" onclick="ExpandSidebar()"></i>
