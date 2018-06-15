@@ -1,8 +1,7 @@
 <?php session_start();
-    if(empty($_SESSION['username']))
-    {
-		header("Location: ./login.php?user=notloged");
-		exit();
+    if (empty($_SESSION['username'])) {
+        header("Location: ./login.php?user=notloged");
+        exit();
     }
 ?>
 
@@ -27,7 +26,7 @@
 				<a href="Home.php">Home</a>
 			</li>
 			<li class="sidebar-el">
-				<a href="Friends.php">Friends</a>
+				<a href="Friends.html">Friends</a>
 			</li>
 			<li class="sidebar-el">
 				<a href="Contact.php" id="active">About us</a>

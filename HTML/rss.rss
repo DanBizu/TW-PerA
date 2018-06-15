@@ -1,39 +1,53 @@
 <?php 
-if(isset($_GET['user'])===true && isset($_GET['pass'])){
-    $conn = mysqli_connect('localhost' , 'root' , '' , 'tw' );
+if (isset($_GET['user'])===true && isset($_GET['pass'])) {
+    $conn = mysqli_connect('localhost', 'root', '', 'tw');
     $user=$_GET['user'];
     $pass=$_GET['pass'];
-   $sql  = $conn->query("Select * from users where username='$user';");
-  if($conn->affected_rows >=1){
+    $sql  = $conn->query("Select * from users where username='$user';");
+    if ($conn->affected_rows >=1) {
         $row = $sql->fetch_assoc();
-        $securePasswordCheck = password_verify($pass , $row['password']);   
-        if($securePasswordCheck == true) {         
-            $userInfo = $conn->query("Select id from users username='$user'");
-            $sql= $conn->query("Select * from activities , engage where activity_id=id and user_id='$user'");
-            if($conn->affected_rows >=1){
-            echo '<?xml version="1.0" encoding="UTF-8" ?>' ?>
+        $securePasswordCheck = password_verify($pass, $row['password']);
+        if ($securePasswordCheck == true) {
+            $usrId = $row['id'];
+            $sql= $conn->query("Select * from activities , engage where activity_id=id and user_id='$usrId'");
+            if ($conn->affected_rows >=1) {
+                echo '<?xml version="1.0" encoding="UTF-8" ?>' ?>
 
                 <rss version="2.0">
-
                 <channel>
                 <title>My home page</title>
                 <link>./Home.php</link>
                 <description>My activities</description>
-                <?php while($row = $sql->fetch_assoc()){ ?>
+                <?php while ($row = $sql->fetch_assoc()) {
+                    ?>
                 <item>
-                    <title><?php echo $row['name'] ;?></title>
+                    <title><?php echo $row['name'] ; ?></title>
                     <link>./Home.php</link>
                     <description><?php 
-                    echo "Location:"; echo $row['location'];
-                    echo "Date:"; echo $row['date']; echo "\n";
-                    echo "Hour:"; echo $row['start'];
-                    ?></description>
+                    echo "Location:";
+                    echo $row['location'];
+                    echo "\n";
+                    echo "Date:";
+                    echo $row['date'];
+                    echo "\n";
+                    echo "Hour:";
+                    echo $row['start']; ?></description>
                 </item>
-                <?php } ?>
+                <?php
+                } ?>
                 </channel>
 
                 </rss>
-<?php }
-}
-}}
-else{echo "Please log in first";} ?>
+<?php
+            } else {
+                echo "No activities";
+            }
+        } else {
+            echo "Unknown user1";
+        }
+    } else {
+        echo "Unknown user";
+    }
+} else {
+    echo "<form></form>";
+} ?>

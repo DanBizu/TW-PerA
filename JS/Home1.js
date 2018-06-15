@@ -9,6 +9,7 @@ function loading(){
       var aux = 'activityContainerButton' + number;
       var aux2 = "'" + aux + "'";
       var aux3 = "'"+'modalEdit'+ number  + "'" ; 
+      
       var aux4= "onsubmit="+ '"' + "return confirm('Do you really want to delete this  activity ?');" + '"';
       var p = document.getElementById('scrollTab');
       var newElement = document.createElement("div");
@@ -81,7 +82,6 @@ window.onclick = function(event) {
 }
 
 function removeElement(childDiv) {
-<<<<<<< HEAD
     var delete_confirmed=confirm("Are you sure you want to delete this file?");
 
     if (delete_confirmed==true) {
@@ -98,15 +98,4 @@ function removeElement(childDiv) {
        document.location.href = './Home.php';
     }
 
-=======
-
-    if (document.getElementById(childDiv)) {
-      var child = document.getElementById(childDiv);
-      var parent = document.getElementById('scrollTab');
-      parent.removeChild(child);
-    } else {
-      alert("Child div has already been removed or does not exist.");
-      return false;
-    }
->>>>>>> 24fb91c4724b9d33f515ee6b6c3a991f2f39ca89
 }

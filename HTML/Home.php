@@ -1,13 +1,11 @@
 <?php session_start();
-    if(empty($_SESSION['username']))
-    {
-		header("Location: ./login.php?user=notloged");
-		exit();
-	}else
-	{
-		include '../PHP/load.lib.php';
-		include '../PHP/clean.lib.php';
-	}
+    if (empty($_SESSION['username'])) {
+        header("Location: ./login.php?user=notloged");
+        exit();
+    } else {
+        include '../PHP/load.lib.php';
+        include '../PHP/clean.lib.php';
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,8 +19,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script type="text/javascript">
 	var userUsername='<?php
-	$userUsername = $_SESSION['username'];
-	 echo "../JSON/$userUsername.txt";?>';
+    $userUsername = $_SESSION['username'];
+     echo "../JSON/$userUsername.txt";?>';
     </script>
 </head>
 
@@ -60,7 +58,7 @@
 				<br>Activity time:
 				<input type="time" value="activityStart" name="activityStart" required>
 				<br>Duration:
-				<input type="number" min=0 max=24 name="activityDuration" required>
+				<input type="number" min=1 max=24 name="activityDuration" required>
 				<br> How Often :
 				<select  name="activityRepeat" required>
 					<option value="Daily">Daily</option>

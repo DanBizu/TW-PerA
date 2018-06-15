@@ -18,10 +18,9 @@
     <?php
     if (isset($_GET['user'])) {
         echo "<script type='text/javascript'>alert('Please log in first');</script>";
-        }
-        elseif (isset($_GET['username'])) {
+    } elseif (isset($_GET['username'])) {
             echo "<script type='text/javascript'>alert('Username already taken try again');</script>";
-            }
+        }
     ?>
 
     <div class='loginBox' id="loginBox">
